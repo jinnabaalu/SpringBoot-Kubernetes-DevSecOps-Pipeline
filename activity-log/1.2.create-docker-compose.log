@@ -1,0 +1,74 @@
+➜  blog mkdir docker-compose
+➜  blog cd docker-compose 
+➜  docker-compose jhipster docker-compose
+
+        ██╗ ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
+        ██║ ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
+        ██║ ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
+  ██╗   ██║ ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
+  ╚██████╔╝ ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
+   ╚═════╝  ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
+                            https://www.jhipster.tech
+Welcome to JHipster v8.7.0
+
+🐳  Welcome to the JHipster Docker Compose Sub-Generator 🐳
+Files will be generated in folder: /Volumes/project/course/infinite-apps/jhipster/blog/docker-compose
+INFO! Docker is installed
+? Enter the root directory where your applications are located ../
+? Which applications do you want to include in your configuration? app
+1 applications found at /Volumes/project/course/infinite-apps/jhipster/blog/
+
+ _______________________________________________________________________________________________________________
+
+  Documentation for creating an application is at https://www.jhipster.tech/creating-an-app/
+
+  Application files will be generated in folder: /Volumes/project/course/infinite-apps/jhipster/blog/app
+ _______________________________________________________________________________________________________________
+
+? Do you want to setup monitoring for your applications ? Yes, for metrics only with Prometheus
+✔ applying multi-step templates
+✔ prettier configuration files committed to disk
+✔ updating package.json dependencies versions
+    force .yo-rc.json
+    force ../app/.yo-rc.json
+   create docker-compose.yml
+   create README-DOCKER-COMPOSE.md
+   create prometheus-conf/prometheus.yml
+   create prometheus-conf/alert_rules.yml
+   create alertmanager-conf/config.yml
+✔ files committed to disk
+
+No change to package.json was detected. No package manager install will be executed.
+
+Checking Docker images in applications directories...
+WARNING! Docker Compose configuration generated, but no Jib cache found
+WARNING! If you forgot to generate the Docker image for this application, please run:
+To generate the missing Docker image(s), please run:
+  ./mvnw -ntp -Pprod verify jib:dockerBuild in /Volumes/project/course/infinite-apps/jhipster/blog/app
+
+INFO! You can launch all your infrastructure by running : docker compose up -d
+
+Your applications will be accessible on these URLs:
+INFO! 	- SpringBootDemo: http://localhost:8080
+
+
+
+Congratulations, JHipster execution is complete!
+If you find JHipster useful consider sponsoring the project https://www.jhipster.tech/sponsors/
+
+Thanks for using JHipster!
+➜  docker-compose ls
+README-DOCKER-COMPOSE.md alertmanager-conf        docker-compose.yml       prometheus-conf
+➜  docker-compose tree
+zsh: command not found: tree
+➜  docker-compose tree
+.
+├── README-DOCKER-COMPOSE.md
+├── alertmanager-conf
+│   └── config.yml
+├── docker-compose.yml
+└── prometheus-conf
+    ├── alert_rules.yml
+    └── prometheus.yml
+
+3 directories, 5 files

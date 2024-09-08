@@ -1,0 +1,31 @@
+services:
+  springbootdemo:
+    image: springbootdemo
+    container_name: springbootdemo
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,api-docs
+      - MANAGEMENT_PROMETHEUS_METRICS_EXPORT_ENABLED=true
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/SpringBootDemo
+      - SPRING_LIQUIBASE_URL=jdbc:postgresql://postgresql:5432/SpringBootDemo
+      - JHIPSTER_LOGGING_LOGSTASH_ENABLED=false
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+    ports:
+      - 8080:8080
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.springbootdemo.rule=Host(`localhost`)"
+      - "traefik.http.services.springbootdemo.loadbalancer.server.port=8080"
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://localhost:8080/management/health
+      interval: 5s
+      timeout: 5s
+      retries: 40
+    networks: ["springbootdemo"]
+networks:
+  springbootdemo:
+    external: true

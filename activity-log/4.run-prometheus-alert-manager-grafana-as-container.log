@@ -1,0 +1,183 @@
+➜  docker-compose cp docker-compose.yml monitor.yml   
+➜  docker-compose cat monitor.yml 
+services:
+  prometheus:
+    image: prom/prometheus:v2.54.0
+    container_name: prometheus
+    volumes:
+      - ./prometheus-conf/:/etc/prometheus/
+      - prometheus_data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    ports: ["9090:9090"]
+    networks: ["springbootdemo"]
+  alertmanager:
+    image: prom/alertmanager:v0.27.0
+    container_name: alertmanager
+    ports: ["9093:9093"]
+    volumes:
+      - ./alertmanager-conf/:/etc/alertmanager/
+    command:
+      - "--config.file=/etc/alertmanager/config.yml"
+      - "--storage.path=/alertmanager"
+    networks: ["springbootdemo"]
+  grafana:
+    image: grafana/grafana:11.1.4
+    ports: ["3000:3000"]
+    volumes:
+      - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    networks: ["springbootdemo"]
+networks:
+  springbootdemo:
+    external: true
+volumes:
+  prometheus_data: {}
+  grafana_data: {}
+➜  docker-compose docker compose -f monitor.yml up -d
+[+] Running 30/30
+ ✔ alertmanager Pulled                                                                                                                                             22.1s 
+   ✔ 9fa9226be034 Already exists                                                                                                                                    0.0s 
+   ✔ e769c9462d1b Pull complete                                                                                                                                    17.4s 
+   ✔ 697c2f9afe54 Pull complete                                                                                                                                    17.9s 
+   ✔ 27aac892fbe9 Pull complete                                                                                                                                    17.9s 
+   ✔ 5c5751833485 Pull complete                                                                                                                                    17.9s 
+   ✔ 4f4fb700ef54 Pull complete                                                                                                                                    17.9s 
+ ✔ prometheus Pulled                                                                                                                                               20.0s 
+   ✔ 1617e25568b2 Already exists                                                                                                                                    0.0s 
+   ✔ 5d2b5f2024cb Pull complete                                                                                                                                    12.7s 
+   ✔ b9e477c51fad Pull complete                                                                                                                                    15.7s 
+   ✔ ddf6327b6834 Pull complete                                                                                                                                    15.7s 
+   ✔ e21ccc305708 Pull complete                                                                                                                                    15.7s 
+   ✔ 8f646ebd2d6e Pull complete                                                                                                                                    15.7s 
+   ✔ b2cf7c15d709 Pull complete                                                                                                                                    15.7s 
+   ✔ 7f88b548253f Pull complete                                                                                                                                    15.8s 
+   ✔ afc32da9379b Pull complete                                                                                                                                    15.8s 
+   ✔ 1c92cb8c3cf3 Pull complete                                                                                                                                    15.8s 
+   ✔ d0edfae48f19 Pull complete                                                                                                                                    15.8s 
+ ✔ grafana Pulled                                                                                                                                                  20.7s 
+   ✔ 4abcf2066143 Already exists                                                                                                                                    0.0s 
+   ✔ b02b4b1ae159 Pull complete                                                                                                                                     1.0s 
+   ✔ 3bb77895c022 Pull complete                                                                                                                                     2.1s 
+   ✔ 06ba99fa00c6 Pull complete                                                                                                                                     2.3s 
+   ✔ 105bf4eba93e Pull complete                                                                                                                                     2.3s 
+   ✔ 94aeabba6e9f Pull complete                                                                                                                                     2.3s 
+   ✔ d5ef5293514d Pull complete                                                                                                                                     7.8s 
+   ✔ 09419083b5bb Pull complete                                                                                                                                    16.5s 
+   ✔ 56983880012c Pull complete                                                                                                                                    16.5s 
+   ✔ 4a1ff49c903a Pull complete                                                                                                                                    16.6s 
+WARN[0022] Found orphan containers ([springbootdemo postgresql]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[+] Running 5/5
+ ✔ Volume "docker-compose_grafana_data"     Created                                                                                                                 0.0s 
+ ✔ Volume "docker-compose_prometheus_data"  Created                                                                                                                 0.0s 
+ ✔ Container prometheus                     Started                                                                                                                 1.2s 
+ ✔ Container docker-compose-grafana-1       Started                                                                                                                 1.2s 
+ ✔ Container alertmanager                   Started                                                                                                                 1.1s 
+➜  docker-compose docker compose -f monitor.yml up -d
+WARN[0000] Found orphan containers ([springbootdemo postgresql]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[+] Running 4/4
+ ✔ Container alertmanager              Running                                                                                                                      0.0s 
+ ✔ Container prometheus                Running                                                                                                                      0.0s 
+ ✔ Container docker-compose-grafana-1  Recreated                                                                                                                    0.2s 
+ ✔ Container grafana                   Started                                                                                                                      0.2s 
+➜  docker-compose docker compose -f monitor.yml down
+[+] Running 3/3
+ ✔ Container alertmanager  Removed                                                                                                                                  0.3s 
+ ✔ Container prometheus    Removed                                                                                                                                  0.3s 
+ ✔ Container grafana       Removed                                                                                                                                  0.2s 
+➜  docker-compose docker compose -f monitor.yml up -d
+WARN[0000] Found orphan containers ([springbootdemo postgresql]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[+] Running 3/3
+ ✔ Container prometheus    Started                                                                                                                                  0.4s 
+ ✔ Container grafana       Started                                                                                                                                  0.4s 
+ ✔ Container alertmanager  Started                                                                                                                                  0.4s 
+➜  docker-compose 
+➜  docker-compose docker ps -a
+CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS                    PORTS                    NAMES
+a181edf80dbf   prom/prometheus:v2.54.0     "/bin/prometheus --c…"   50 seconds ago   Up 49 seconds             0.0.0.0:9090->9090/tcp   prometheus
+ca6e17b33a03   grafana/grafana:11.1.4      "/run.sh"                50 seconds ago   Up 49 seconds             0.0.0.0:3000->3000/tcp   grafana
+450bd90746b5   prom/alertmanager:v0.27.0   "/bin/alertmanager -…"   50 seconds ago   Up 49 seconds             0.0.0.0:9093->9093/tcp   alertmanager
+b38e15cd9c60   springbootdemo              "bash -c /entrypoint…"   9 minutes ago    Up 9 minutes (healthy)    0.0.0.0:8080->8080/tcp   springbootdemo
+54e06ddbece0   postgres:16.4               "docker-entrypoint.s…"   16 minutes ago   Up 16 minutes (healthy)   0.0.0.0:5432->5432/tcp   postgresql
+➜  docker-compose docker logs prometheus
+ts=2024-09-07T20:44:39.818Z caller=main.go:601 level=info msg="No time or size retention was set so using the default time retention" duration=15d
+ts=2024-09-07T20:44:39.818Z caller=main.go:645 level=info msg="Starting Prometheus Server" mode=server version="(version=2.54.0, branch=HEAD, revision=5354e87a70d3eb26b81b601b286d66ff983990f6)"
+ts=2024-09-07T20:44:39.818Z caller=main.go:650 level=info build_context="(go=go1.22.6, platform=linux/amd64, user=root@68a9e2472a68, date=20240809-11:36:32, tags=netgo,builtinassets,stringlabels)"
+ts=2024-09-07T20:44:39.818Z caller=main.go:651 level=info host_details="(Linux 6.10.4-linuxkit #1 SMP PREEMPT_DYNAMIC Mon Aug 12 08:48:58 UTC 2024 x86_64 a181edf80dbf (none))"
+ts=2024-09-07T20:44:39.819Z caller=main.go:652 level=info fd_limits="(soft=1048576, hard=1048576)"
+ts=2024-09-07T20:44:39.819Z caller=main.go:653 level=info vm_limits="(soft=unlimited, hard=unlimited)"
+ts=2024-09-07T20:44:39.822Z caller=web.go:571 level=info component=web msg="Start listening for connections" address=0.0.0.0:9090
+ts=2024-09-07T20:44:39.823Z caller=main.go:1160 level=info msg="Starting TSDB ..."
+ts=2024-09-07T20:44:39.824Z caller=tls_config.go:313 level=info component=web msg="Listening on" address=[::]:9090
+ts=2024-09-07T20:44:39.825Z caller=tls_config.go:316 level=info component=web msg="TLS is disabled." http2=false address=[::]:9090
+ts=2024-09-07T20:44:39.827Z caller=head.go:626 level=info component=tsdb msg="Replaying on-disk memory mappable chunks if any"
+ts=2024-09-07T20:44:39.827Z caller=head.go:713 level=info component=tsdb msg="On-disk memory mappable chunks replay completed" duration=2.341µs
+ts=2024-09-07T20:44:39.827Z caller=head.go:721 level=info component=tsdb msg="Replaying WAL, this may take a while"
+ts=2024-09-07T20:44:39.844Z caller=head.go:793 level=info component=tsdb msg="WAL segment loaded" segment=0 maxSegment=1
+ts=2024-09-07T20:44:39.845Z caller=head.go:793 level=info component=tsdb msg="WAL segment loaded" segment=1 maxSegment=1
+ts=2024-09-07T20:44:39.845Z caller=head.go:830 level=info component=tsdb msg="WAL replay completed" checkpoint_replay_duration=49.253µs wal_replay_duration=18.139265ms wbl_replay_duration=164ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=2.341µs total_replay_duration=18.229819ms
+ts=2024-09-07T20:44:39.848Z caller=main.go:1181 level=info fs_type=EXT4_SUPER_MAGIC
+ts=2024-09-07T20:44:39.848Z caller=main.go:1184 level=info msg="TSDB started"
+ts=2024-09-07T20:44:39.848Z caller=main.go:1367 level=info msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
+ts=2024-09-07T20:44:39.851Z caller=main.go:1404 level=info msg="updated GOGC" old=100 new=75
+ts=2024-09-07T20:44:39.851Z caller=main.go:1415 level=info msg="Completed loading of configuration file" filename=/etc/prometheus/prometheus.yml totalDuration=3.16479ms db_storage=1.205µs remote_storage=1.457µs web_handler=569ns query_engine=8.766µs scrape=276.306µs scrape_sd=25.886µs notify=227.614µs notify_sd=16.285µs rules=1.570236ms tracing=6.114µs
+ts=2024-09-07T20:44:39.851Z caller=main.go:1145 level=info msg="Server is ready to receive web requests."
+ts=2024-09-07T20:44:39.851Z caller=manager.go:164 level=info component="rule manager" msg="Starting rule manager..."
+➜  docker-compose docker logs grafana
+logger=settings t=2024-09-07T20:44:39.875620276Z level=info msg="Starting Grafana" version=11.1.4 commit=13173c9874af312fe75545f52aa6539af02076ac branch=v11.1.x compiled=2024-09-07T20:44:39Z
+logger=settings t=2024-09-07T20:44:39.876027099Z level=info msg="Config loaded from" file=/usr/share/grafana/conf/defaults.ini
+logger=settings t=2024-09-07T20:44:39.876076412Z level=info msg="Config loaded from" file=/etc/grafana/grafana.ini
+logger=settings t=2024-09-07T20:44:39.876084326Z level=info msg="Config overridden from command line" arg="default.paths.data=/var/lib/grafana"
+logger=settings t=2024-09-07T20:44:39.87608861Z level=info msg="Config overridden from command line" arg="default.paths.logs=/var/log/grafana"
+logger=settings t=2024-09-07T20:44:39.876092376Z level=info msg="Config overridden from command line" arg="default.paths.plugins=/var/lib/grafana/plugins"
+logger=settings t=2024-09-07T20:44:39.876096188Z level=info msg="Config overridden from command line" arg="default.paths.provisioning=/etc/grafana/provisioning"
+logger=settings t=2024-09-07T20:44:39.876099889Z level=info msg="Config overridden from command line" arg="default.log.mode=console"
+logger=settings t=2024-09-07T20:44:39.876104013Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_DATA=/var/lib/grafana"
+logger=settings t=2024-09-07T20:44:39.876107851Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_LOGS=/var/log/grafana"
+logger=settings t=2024-09-07T20:44:39.876111273Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_PLUGINS=/var/lib/grafana/plugins"
+logger=settings t=2024-09-07T20:44:39.876116465Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_PROVISIONING=/etc/grafana/provisioning"
+logger=settings t=2024-09-07T20:44:39.876120226Z level=info msg="Config overridden from Environment variable" var="GF_SECURITY_ADMIN_PASSWORD=*********"
+logger=settings t=2024-09-07T20:44:39.876123812Z level=info msg="Config overridden from Environment variable" var="GF_USERS_ALLOW_SIGN_UP=false"
+logger=settings t=2024-09-07T20:44:39.876127653Z level=info msg=Target target=[all]
+logger=settings t=2024-09-07T20:44:39.876136262Z level=info msg="Path Home" path=/usr/share/grafana
+logger=settings t=2024-09-07T20:44:39.876139996Z level=info msg="Path Data" path=/var/lib/grafana
+logger=settings t=2024-09-07T20:44:39.876143493Z level=info msg="Path Logs" path=/var/log/grafana
+logger=settings t=2024-09-07T20:44:39.87614698Z level=info msg="Path Plugins" path=/var/lib/grafana/plugins
+logger=settings t=2024-09-07T20:44:39.876156359Z level=info msg="Path Provisioning" path=/etc/grafana/provisioning
+logger=settings t=2024-09-07T20:44:39.876161249Z level=info msg="App mode production"
+logger=featuremgmt t=2024-09-07T20:44:39.876467805Z level=info msg=FeatureToggles correlations=true logsInfiniteScrolling=true exploreContentOutline=true managedPluginsInstall=true prometheusAzureOverrideAudience=true recoveryThreshold=true cloudWatchCrossAccountQuerying=true awsDatasourcesNewFormStyling=true nestedFolders=true logsContextDatasourceUi=true awsAsyncQueryCaching=true lokiStructuredMetadata=true alertingNoDataErrorExecution=true dashgpt=true lokiQuerySplitting=true cloudWatchNewLabelParsing=true panelMonitoring=true prometheusDataplane=true logsExploreTableVisualisation=true exploreMetrics=true angularDeprecationUI=true alertingInsights=true ssoSettingsApi=true logRowsPopoverMenu=true influxdbBackendMigration=true annotationPermissionUpdate=true lokiQueryHints=true betterPageScrolling=true recordedQueriesMulti=true dataplaneFrontendFallback=true prometheusMetricEncyclopedia=true alertingSimplifiedRouting=true kubernetesPlaylists=true prometheusConfigOverhaulAuth=true lokiMetricDataplane=true transformationsRedesign=true topnav=true publicDashboards=true
+logger=sqlstore t=2024-09-07T20:44:39.876557616Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2024-09-07T20:44:39.886181607Z level=info msg="Locking database"
+logger=migrator t=2024-09-07T20:44:39.886237398Z level=info msg="Starting DB migrations"
+logger=migrator t=2024-09-07T20:44:39.91050486Z level=info msg="migrations completed" performed=0 skipped=572 duration=5.387833ms
+logger=migrator t=2024-09-07T20:44:39.911947572Z level=info msg="Unlocking database"
+logger=secrets t=2024-09-07T20:44:39.912816577Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.angulardetectorsprovider.dynamic t=2024-09-07T20:44:39.960947872Z level=info msg="Restored cache from database" duration=624.154µs
+logger=plugin.store t=2024-09-07T20:44:39.963288843Z level=info msg="Loading plugins..."
+logger=plugins.registration t=2024-09-07T20:44:40.004041232Z level=error msg="Could not register plugin" pluginId=xychart error="plugin xychart is already registered"
+logger=plugins.initialization t=2024-09-07T20:44:40.004104436Z level=error msg="Could not initialize plugin" pluginId=xychart error="plugin xychart is already registered"
+logger=local.finder t=2024-09-07T20:44:40.004188591Z level=warn msg="Skipping finding plugins as directory does not exist" path=/usr/share/grafana/plugins-bundled
+logger=plugin.store t=2024-09-07T20:44:40.00420045Z level=info msg="Plugins loaded" count=54 duration=40.912634ms
+logger=query_data t=2024-09-07T20:44:40.008459527Z level=info msg="Query Service initialization"
+logger=live.push_http t=2024-09-07T20:44:40.011458105Z level=info msg="Live Push Gateway initialization"
+logger=ngalert.notifier.alertmanager org=1 t=2024-09-07T20:44:40.014641149Z level=info msg="Applying new configuration to Alertmanager" configHash=d2c56faca6af2a5772ff4253222f7386
+logger=ngalert.state.manager t=2024-09-07T20:44:40.021625118Z level=info msg="Running in alternative execution of Error/NoData mode"
+logger=infra.usagestats.collector t=2024-09-07T20:44:40.024045015Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-09-07T20:44:40.024867079Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-09-07T20:44:40.025019493Z level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2024-09-07T20:44:40.025550134Z level=info msg="Warming state cache for startup"
+logger=ngalert.multiorg.alertmanager t=2024-09-07T20:44:40.025976654Z level=info msg="Starting MultiOrg Alertmanager"
+logger=grafanaStorageLogger t=2024-09-07T20:44:40.02730092Z level=info msg="Storage starting"
+logger=provisioning.dashboard t=2024-09-07T20:44:40.029327718Z level=info msg="starting to provision dashboards"
+logger=provisioning.dashboard t=2024-09-07T20:44:40.0294521Z level=info msg="finished to provision dashboards"
+logger=http.server t=2024-09-07T20:44:40.029541086Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-09-07T20:44:40.103466572Z level=info msg="State cache has been initialized" states=0 duration=77.91509ms
+logger=ngalert.scheduler t=2024-09-07T20:44:40.103533736Z level=info msg="Starting scheduler" tickInterval=10s maxAttempts=1
+logger=ticker t=2024-09-07T20:44:40.103584213Z level=info msg=starting first_tick=2024-09-07T20:44:50Z
+logger=plugins.update.checker t=2024-09-07T20:44:40.469253208Z level=info msg="Update check succeeded" duration=443.406258ms
+logger=grafana.update.checker t=2024-09-07T20:44:40.470253313Z level=info msg="Update check succeeded" duration=444.856664ms
+logger=grafana-apiserver t=2024-09-07T20:44:40.501445605Z level=info msg="Adding GroupVersion playlist.grafana.app v0alpha1 to ResourceManager"
+logger=grafana-apiserver t=2024-09-07T20:44:40.502136865Z level=info msg="Adding GroupVersion featuretoggle.grafana.app v0alpha1 to ResourceManager"
+➜  docker-compose 

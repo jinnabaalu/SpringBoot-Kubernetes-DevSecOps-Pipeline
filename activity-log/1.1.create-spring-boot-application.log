@@ -1,0 +1,446 @@
+➜  app jhipster               
+
+        ██╗ ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
+        ██║ ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
+        ██║ ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
+  ██╗   ██║ ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
+  ╚██████╔╝ ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
+   ╚═════╝  ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
+                            https://www.jhipster.tech
+Welcome to JHipster v8.7.0
+
+ _______________________________________________________________________________________________________________
+
+  Documentation for creating an application is at https://www.jhipster.tech/creating-an-app/
+
+  Application files will be generated in folder: /Volumes/project/course/infinite-apps/jhipster/blog/app
+ _______________________________________________________________________________________________________________
+
+? What is the base name of your application? SpringBootDemo
+? Which *type* of application would you like to create? Monolithic application (recommended for simple projects)
+? What is your default Java package name? app.springboot.demo
+? Would you like to use Maven or Gradle for building the backend? Maven
+? Do you want to make it reactive with Spring WebFlux? No
+? Which *type* of authentication would you like to use? JWT authentication (stateless, with a token)
+? Besides JUnit, which testing frameworks would you like to use? 
+? Which *type* of database would you like to use? SQL (H2, PostgreSQL, MySQL, MariaDB, Oracle, MSSQL)
+? Which *production* database would you like to use? PostgreSQL
+? Which *development* database would you like to use? PostgreSQL
+? Which cache do you want to use? (Spring cache abstraction) No cache - Warning, when using an SQL database, this will disable the Hibernate 2nd level cache!
+? Which other technologies would you like to use? 
+INFO! Disabling hibernate cache for cache provider no
+? Which *framework* would you like to use for the client? React
+? Besides Jest/Vitest, which testing frameworks would you like to use? 
+? Do you want to generate the admin UI? Yes
+? Would you like to use a Bootswatch theme (https://bootswatch.com/)? Default JHipster
+? Would you like to enable internationalization support? No
+? Please choose the native language of the application English
+? Please choose additional languages to install 
+     info Could not remove legacy file .huskyrc
+     info Could not remove legacy file .lintstagedrc.js
+     info Generating 2,048 bit RSA key pair and self-signed certificate (SHA384withRSA) with a validity of 99,999 days
+     info 	for: CN=Java Hipster, OU=Development, O=app.springboot.demo, L=, ST=, C=
+     info KeyStore '/Volumes/project/course/infinite-apps/jhipster/blog/app/src/main/resources/config/tls/keystore.p12' generated successfully.
+     info Could not remove legacy file .eslintrc.json
+     info Could not remove legacy file .eslintignore
+✔ applying multi-step templates
+✔ Git repository initialized.
+   create .prettierrc
+   create .prettierignore
+✔ prettier configuration files committed to disk
+✔ loading translations
+✔ updating package.json dependencies versions
+✔ prettifying sonar-project.properties
+✔ adding package-info.java files
+✔ sorting pom.xml file
+✔ translating react application
+   create sonar-project.properties
+   create .husky/pre-commit
+   create src/main/resources/banner.txt
+   create .devcontainer/Dockerfile
+   create pom.xml
+   create src/main/resources/logback-spring.xml
+   create src/main/resources/i18n/messages.properties
+   create src/test/resources/logback.xml
+   create src/test/resources/junit-platform.properties
+   create src/test/resources/i18n/messages_en.properties
+   create mvnw
+   create mvnw.cmd
+   create .mvn/wrapper/maven-wrapper.jar
+   create .mvn/wrapper/maven-wrapper.properties
+   create .mvn/jvm.config
+   create src/main/docker/jib/entrypoint.sh
+   create checkstyle.xml
+   create npmw
+   create npmw.cmd
+   create src/main/resources/config/liquibase/changelog/00000000000000_initial_schema.xml
+   create src/main/resources/config/liquibase/master.xml
+   create src/main/resources/config/liquibase/data/user.csv
+   create src/main/resources/config/liquibase/data/user_authority.csv
+   create src/main/resources/config/liquibase/data/authority.csv
+   create src/main/webapp/content/images/jhipster_family_member_0.svg
+   create src/main/webapp/content/images/jhipster_family_member_0_head-192.png
+   create src/main/webapp/content/images/jhipster_family_member_0_head-256.png
+   create src/main/webapp/content/images/jhipster_family_member_0_head-384.png
+   create src/main/webapp/content/images/jhipster_family_member_0_head-512.png
+   create src/main/webapp/content/images/jhipster_family_member_1.svg
+   create src/main/webapp/content/images/jhipster_family_member_1_head-192.png
+   create src/main/webapp/content/images/jhipster_family_member_1_head-256.png
+   create src/main/webapp/content/images/jhipster_family_member_1_head-384.png
+   create src/main/webapp/content/images/jhipster_family_member_1_head-512.png
+   create src/main/webapp/content/images/jhipster_family_member_2.svg
+   create src/main/webapp/content/images/jhipster_family_member_2_head-192.png
+   create src/main/webapp/content/images/jhipster_family_member_2_head-256.png
+   create src/main/webapp/content/images/jhipster_family_member_2_head-384.png
+   create src/main/webapp/content/images/jhipster_family_member_2_head-512.png
+   create src/main/webapp/content/images/jhipster_family_member_3.svg
+   create src/main/webapp/content/images/jhipster_family_member_3_head-192.png
+   create src/main/webapp/content/images/jhipster_family_member_3_head-256.png
+   create src/main/webapp/content/images/jhipster_family_member_3_head-384.png
+   create src/main/webapp/content/images/jhipster_family_member_3_head-512.png
+   create src/main/webapp/content/images/logo-jhipster.png
+   create src/main/webapp/favicon.ico
+   create src/main/webapp/swagger-ui/dist/images/throbber.gif
+   create src/main/webapp/manifest.webapp
+   create src/main/webapp/WEB-INF/web.xml
+   create src/main/webapp/robots.txt
+   create webpack/logo-jhipster.png
+   create .gitignore
+   create .gitattributes
+   create .editorconfig
+   create src/test/resources/META-INF/spring.factories
+   create package.json
+    force .yo-rc.json
+   create .devcontainer/devcontainer.json
+   create src/main/resources/templates/error.html
+   create src/main/resources/config/application.yml
+   create src/main/resources/config/application-dev.yml
+   create src/main/resources/config/application-tls.yml
+   create src/main/resources/config/application-prod.yml
+   create src/test/resources/config/application.yml
+   create src/main/resources/templates/mail/activationEmail.html
+   create src/main/resources/templates/mail/creationEmail.html
+   create src/main/resources/templates/mail/passwordResetEmail.html
+   create src/test/resources/templates/mail/activationEmail.html
+   create src/test/resources/templates/mail/creationEmail.html
+   create src/test/resources/templates/mail/testEmail.html
+   create src/test/resources/templates/mail/passwordResetEmail.html
+   create src/main/docker/postgresql.yml
+   create src/main/docker/app.yml
+   create src/main/docker/jhipster-control-center.yml
+   create src/main/docker/monitoring.yml
+   create src/main/docker/grafana/provisioning/dashboards/dashboard.yml
+   create src/main/docker/grafana/provisioning/dashboards/JVM.json
+   create src/main/docker/grafana/provisioning/datasources/datasource.yml
+   create src/main/docker/sonar.yml
+   create src/main/docker/prometheus/prometheus.yml
+   create src/test/resources/config/application-testdev.yml
+   create src/test/resources/config/application-testprod.yml
+   create src/main/webapp/content/css/loading.css
+   create src/main/webapp/404.html
+   create src/main/webapp/index.html
+   create src/main/webapp/swagger-ui/index.html
+   create tsconfig.json
+   create tsconfig.test.json
+   create src/main/webapp/app/app.scss
+   create src/main/webapp/app/_bootstrap-variables.scss
+   create src/main/webapp/app/modules/home/home.scss
+   create src/main/webapp/app/modules/administration/docs/docs.scss
+   create src/main/webapp/app/shared/layout/header/header.scss
+   create src/main/webapp/app/shared/layout/footer/footer.scss
+   create src/main/webapp/app/shared/layout/password/password-strength-bar.scss
+   create README.md
+   create src/main/docker/services.yml
+   create src/test/java/app/springboot/demo/domain/AssertUtils.java
+   create src/test/java/app/springboot/demo/security/SecurityUtilsUnitTest.java
+   create src/test/java/app/springboot/demo/TechnicalStructureTest.java
+   create src/test/java/app/springboot/demo/config/AsyncSyncConfiguration.java
+   create src/test/java/app/springboot/demo/IntegrationTest.java
+   create src/test/java/app/springboot/demo/config/SpringBootTestClassOrderer.java
+   create src/test/java/app/springboot/demo/config/StaticResourcesWebConfigurerTest.java
+   create src/test/java/app/springboot/demo/web/filter/SpaWebFilterIT.java
+   create src/test/java/app/springboot/demo/web/rest/TestUtil.java
+   create src/test/java/app/springboot/demo/web/rest/errors/ExceptionTranslatorTestController.java
+   create src/test/java/app/springboot/demo/web/rest/errors/ExceptionTranslatorIT.java
+   create src/test/java/app/springboot/demo/web/rest/WithUnauthenticatedMockUser.java
+   create src/test/java/app/springboot/demo/management/SecurityMetersServiceTests.java
+   create src/test/java/app/springboot/demo/security/jwt/JwtAuthenticationTestUtils.java
+   create src/test/java/app/springboot/demo/security/jwt/AuthenticationIntegrationTest.java
+   create src/test/java/app/springboot/demo/security/jwt/TokenAuthenticationSecurityMetersIT.java
+   create src/test/java/app/springboot/demo/security/jwt/TokenAuthenticationIT.java
+   create src/test/java/app/springboot/demo/web/rest/AuthenticateControllerIT.java
+   create src/test/java/app/springboot/demo/web/rest/AccountResourceIT.java
+   create src/main/java/app/springboot/demo/package-info.java
+   create src/main/java/app/springboot/demo/GeneratedByJHipster.java
+   create src/main/java/app/springboot/demo/security/package-info.java
+   create src/main/java/app/springboot/demo/security/SpringSecurityAuditorAware.java
+   create src/main/java/app/springboot/demo/security/SecurityUtils.java
+   create src/main/java/app/springboot/demo/security/AuthoritiesConstants.java
+   create src/main/java/app/springboot/demo/config/package-info.java
+   create src/main/java/app/springboot/demo/config/SecurityConfiguration.java
+   create src/main/java/app/springboot/demo/SpringBootDemoApp.java
+   create src/main/java/app/springboot/demo/aop/logging/package-info.java
+   create src/main/java/app/springboot/demo/aop/logging/LoggingAspect.java
+   create src/main/java/app/springboot/demo/config/AsyncConfiguration.java
+   create src/main/java/app/springboot/demo/config/CRLFLogConverter.java
+   create src/main/java/app/springboot/demo/config/DateTimeFormatConfiguration.java
+   create src/main/java/app/springboot/demo/config/LoggingConfiguration.java
+   create src/test/java/app/springboot/demo/service/MailServiceIT.java
+   create src/test/java/app/springboot/demo/security/DomainUserDetailsServiceIT.java
+   create src/test/java/app/springboot/demo/config/CRLFLogConverterTest.java
+   create src/test/java/app/springboot/demo/config/WebConfigurerTest.java
+   create src/test/java/app/springboot/demo/config/WebConfigurerTestController.java
+   create src/test/java/app/springboot/demo/config/timezone/HibernateTimeZoneIT.java
+   create src/test/java/app/springboot/demo/repository/timezone/DateTimeWrapper.java
+   create src/test/java/app/springboot/demo/repository/timezone/DateTimeWrapperRepository.java
+   create src/test/java/app/springboot/demo/config/EmbeddedSQL.java
+   create src/test/java/app/springboot/demo/config/SqlTestContainer.java
+   create src/test/java/app/springboot/demo/config/SqlTestContainersSpringContextCustomizerFactory.java
+   create src/test/java/app/springboot/demo/config/PostgreSqlTestContainer.java
+   create src/test/java/app/springboot/demo/domain/AuthorityAsserts.java
+   create src/test/java/app/springboot/demo/domain/AuthorityTest.java
+   create src/test/java/app/springboot/demo/domain/AuthorityTestSamples.java
+   create src/test/java/app/springboot/demo/service/mapper/UserMapperTest.java
+   create src/main/java/app/springboot/demo/config/ApplicationProperties.java
+   create src/main/java/app/springboot/demo/config/JacksonConfiguration.java
+   create src/main/java/app/springboot/demo/config/LoggingAspectConfiguration.java
+   create src/main/java/app/springboot/demo/config/WebConfigurer.java
+   create src/main/java/app/springboot/demo/config/Constants.java
+   create src/main/java/app/springboot/demo/domain/package-info.java
+   create src/main/java/app/springboot/demo/domain/AbstractAuditingEntity.java
+   create src/main/java/app/springboot/demo/web/rest/errors/package-info.java
+   create src/main/java/app/springboot/demo/web/rest/errors/BadRequestAlertException.java
+   create src/main/java/app/springboot/demo/web/rest/errors/ErrorConstants.java
+   create src/main/java/app/springboot/demo/web/rest/errors/ExceptionTranslator.java
+   create src/main/java/app/springboot/demo/web/rest/errors/FieldErrorVM.java
+   create src/main/java/app/springboot/demo/config/StaticResourcesWebConfiguration.java
+   create src/main/java/app/springboot/demo/web/filter/package-info.java
+   create src/main/java/app/springboot/demo/web/filter/SpaWebFilter.java
+   create src/main/java/app/springboot/demo/config/SecurityJwtConfiguration.java
+   create src/test/java/app/springboot/demo/service/UserServiceIT.java
+   create src/test/java/app/springboot/demo/web/rest/UserResourceIT.java
+   create src/test/java/app/springboot/demo/web/rest/PublicUserResourceIT.java
+   create src/test/java/app/springboot/demo/web/rest/AuthorityResourceIT.java
+   create src/main/java/app/springboot/demo/management/package-info.java
+   create src/main/java/app/springboot/demo/management/SecurityMetersService.java
+   create src/main/java/app/springboot/demo/web/rest/vm/package-info.java
+   create src/main/java/app/springboot/demo/web/rest/vm/LoginVM.java
+   create src/main/java/app/springboot/demo/web/rest/package-info.java
+   create src/main/java/app/springboot/demo/web/rest/AuthenticateController.java
+   create src/main/java/app/springboot/demo/web/rest/AccountResource.java
+   create src/main/java/app/springboot/demo/web/rest/vm/ManagedUserVM.java
+   create src/main/java/app/springboot/demo/security/DomainUserDetailsService.java
+   create src/main/java/app/springboot/demo/security/UserNotActivatedException.java
+   create src/main/java/app/springboot/demo/service/package-info.java
+   create src/main/java/app/springboot/demo/service/MailService.java
+   create src/main/java/app/springboot/demo/service/dto/package-info.java
+   create src/main/java/app/springboot/demo/service/dto/PasswordChangeDTO.java
+   create src/main/java/app/springboot/demo/service/EmailAlreadyUsedException.java
+   create src/main/java/app/springboot/demo/service/InvalidPasswordException.java
+   create src/main/java/app/springboot/demo/service/UsernameAlreadyUsedException.java
+   create src/main/java/app/springboot/demo/web/rest/vm/KeyAndPasswordVM.java
+   create src/main/java/app/springboot/demo/web/rest/errors/EmailAlreadyUsedException.java
+   create src/main/java/app/springboot/demo/web/rest/errors/InvalidPasswordException.java
+   create src/main/java/app/springboot/demo/web/rest/errors/LoginAlreadyUsedException.java
+   create src/main/java/app/springboot/demo/ApplicationWebXml.java
+   create src/main/java/app/springboot/demo/config/DatabaseConfiguration.java
+   create src/main/java/app/springboot/demo/config/LiquibaseConfiguration.java
+   create src/main/java/app/springboot/demo/domain/User.java
+   create src/main/java/app/springboot/demo/service/dto/UserDTO.java
+   create src/main/java/app/springboot/demo/service/dto/AdminUserDTO.java
+   create src/main/java/app/springboot/demo/service/mapper/package-info.java
+   create src/main/java/app/springboot/demo/service/mapper/UserMapper.java
+   create src/main/java/app/springboot/demo/web/rest/UserResource.java
+   create src/main/java/app/springboot/demo/service/UserService.java
+   create src/main/java/app/springboot/demo/repository/package-info.java
+   create src/main/java/app/springboot/demo/repository/UserRepository.java
+   create src/main/java/app/springboot/demo/web/rest/PublicUserResource.java
+   create src/main/java/app/springboot/demo/web/rest/AuthorityResource.java
+   create src/main/java/app/springboot/demo/repository/AuthorityRepository.java
+   create src/main/java/app/springboot/demo/domain/Authority.java
+   create .lintstagedrc.cjs
+   create jest.conf.js
+   create webpack/environment.js
+   create webpack/webpack.common.js
+   create webpack/webpack.prod.js
+   create webpack/webpack.dev.js
+   create webpack/utils.js
+   create postcss.config.js
+   create src/main/webapp/app/app.tsx
+   create src/main/webapp/app/index.tsx
+   create src/main/webapp/app/routes.tsx
+   create src/main/webapp/app/setup-tests.ts
+   create src/main/webapp/app/typings.d.ts
+   create src/main/webapp/app/config/constants.ts
+   create src/main/webapp/app/config/dayjs.ts
+   create src/main/webapp/app/config/axios-interceptor.ts
+   create src/main/webapp/app/config/error-middleware.ts
+   create src/main/webapp/app/config/logger-middleware.ts
+   create src/main/webapp/app/config/notification-middleware.ts
+   create src/main/webapp/app/config/store.ts
+   create src/main/webapp/app/config/icon-loader.ts
+   create src/main/webapp/app/entities/reducers.ts
+   create src/main/webapp/app/entities/menu.tsx
+   create src/main/webapp/app/entities/routes.tsx
+   create src/main/webapp/app/modules/home/home.tsx
+   create src/main/webapp/app/modules/login/logout.tsx
+   create src/main/webapp/app/modules/login/login.tsx
+   create src/main/webapp/app/modules/login/login-modal.tsx
+   create src/main/webapp/app/shared/reducers/index.ts
+   create src/main/webapp/app/shared/reducers/reducer.utils.ts
+   create src/main/webapp/app/shared/reducers/authentication.ts
+   create src/main/webapp/app/modules/account/index.tsx
+   create src/main/webapp/app/shared/reducers/application-profile.ts
+   create src/main/webapp/app/modules/account/activate/activate.tsx
+   create src/main/webapp/app/modules/account/password/password.tsx
+   create src/main/webapp/app/modules/account/register/register.tsx
+   create src/main/webapp/app/modules/account/password-reset/init/password-reset-init.tsx
+   create src/main/webapp/app/modules/account/password-reset/finish/password-reset-finish.tsx
+   create src/main/webapp/app/modules/account/settings/settings.tsx
+   create src/main/webapp/app/modules/account/register/register.reducer.ts
+   create src/main/webapp/app/modules/account/activate/activate.reducer.ts
+   create src/main/webapp/app/modules/account/password-reset/password-reset.reducer.ts
+   create src/main/webapp/app/modules/account/password/password.reducer.ts
+   create src/main/webapp/app/modules/account/settings/settings.reducer.ts
+   create src/main/webapp/app/modules/administration/index.tsx
+   create src/main/webapp/app/modules/administration/administration.reducer.ts
+   create src/main/webapp/app/modules/administration/docs/docs.tsx
+   create src/main/webapp/app/modules/administration/configuration/configuration.tsx
+   create src/main/webapp/app/modules/administration/health/health.tsx
+   create src/main/webapp/app/modules/administration/health/health-modal.tsx
+   create src/main/webapp/app/modules/administration/logs/logs.tsx
+   create src/main/webapp/app/modules/administration/user-management/index.tsx
+   create src/main/webapp/app/modules/administration/metrics/metrics.tsx
+   create src/main/webapp/app/modules/administration/user-management/user-management.tsx
+   create src/main/webapp/app/modules/administration/user-management/user-management-update.tsx
+   create src/main/webapp/app/modules/administration/user-management/user-management-detail.tsx
+   create src/main/webapp/app/modules/administration/user-management/user-management.reducer.ts
+   create src/main/webapp/app/modules/administration/user-management/user-management-delete-dialog.tsx
+   create src/main/webapp/app/shared/layout/footer/footer.tsx
+   create src/main/webapp/app/shared/layout/header/header.tsx
+   create src/main/webapp/app/shared/layout/header/header-components.tsx
+   create src/main/webapp/app/shared/layout/menus/admin.tsx
+   create src/main/webapp/app/shared/layout/menus/index.ts
+   create src/main/webapp/app/shared/layout/menus/account.tsx
+   create src/main/webapp/app/shared/layout/menus/entities.tsx
+   create src/main/webapp/app/shared/layout/menus/menu-components.tsx
+   create src/main/webapp/app/shared/layout/menus/menu-item.tsx
+   create src/main/webapp/app/shared/layout/password/password-strength-bar.tsx
+   create src/main/webapp/app/shared/util/date-utils.ts
+   create src/main/webapp/app/shared/util/pagination.constants.ts
+   create src/main/webapp/app/shared/util/entity-utils.ts
+   create src/main/webapp/app/shared/auth/private-route.tsx
+   create src/main/webapp/app/shared/error/error-boundary.tsx
+   create src/main/webapp/app/shared/error/error-boundary-routes.tsx
+   create src/main/webapp/app/shared/error/page-not-found.tsx
+   create src/main/webapp/app/shared/DurationFormat.tsx
+   create src/main/webapp/app/shared/model/user.model.ts
+   create src/main/webapp/app/config/axios-interceptor.spec.ts
+   create src/main/webapp/app/config/notification-middleware.spec.ts
+   create src/main/webapp/app/shared/reducers/application-profile.spec.ts
+   create src/main/webapp/app/shared/reducers/authentication.spec.ts
+   create src/main/webapp/app/shared/util/entity-utils.spec.ts
+   create src/main/webapp/app/shared/auth/private-route.spec.tsx
+   create src/main/webapp/app/shared/error/error-boundary.spec.tsx
+   create src/main/webapp/app/shared/error/error-boundary-routes.spec.tsx
+   create src/main/webapp/app/shared/layout/header/header.spec.tsx
+   create src/main/webapp/app/shared/layout/menus/account.spec.tsx
+   create src/main/webapp/app/modules/administration/administration.reducer.spec.ts
+   create src/main/webapp/app/modules/account/register/register.reducer.spec.ts
+   create src/main/webapp/app/modules/account/activate/activate.reducer.spec.ts
+   create src/main/webapp/app/modules/account/password/password.reducer.spec.ts
+   create src/main/webapp/app/modules/account/settings/settings.reducer.spec.ts
+   create src/main/webapp/app/modules/administration/user-management/user-management.reducer.spec.ts
+   create src/main/webapp/app/shared/jhipster/problem-details.ts
+   create src/main/webapp/app/shared/jhipster/headers.ts
+   create eslint.config.mjs
+✔ files committed to disk
+
+Changes to package.json were detected.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< app.springboot.demo:spring-boot-demo >----------------
+[INFO] Building Spring Boot Demo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- frontend:1.15.0:install-node-and-npm (install-node-and-npm) @ spring-boot-demo ---
+[INFO] Installing node version v20.17.0
+[INFO] Unpacking /Users/balu/.m2/repository/com/github/eirslett/node/20.17.0/node-20.17.0-darwin-x64.tar.gz into /Volumes/project/course/infinite-apps/jhipster/blog/app/target/node/tmp
+[INFO] Copying node binary from /Volumes/project/course/infinite-apps/jhipster/blog/app/target/node/tmp/node-v20.17.0-darwin-x64/bin/node to /Volumes/project/course/infinite-apps/jhipster/blog/app/target/node/node
+[INFO] Installed node locally.
+[INFO] Installing npm version 10.8.2
+[INFO] Unpacking /Users/balu/.m2/repository/com/github/eirslett/npm/10.8.2/npm-10.8.2.tar.gz into /Volumes/project/course/infinite-apps/jhipster/blog/app/target/node/node_modules
+[INFO] Installed npm locally.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.822 s
+[INFO] Finished at: 2024-09-08T01:44:26+05:30
+[INFO] ------------------------------------------------------------------------
+Using node installed locally v20.17.0
+Using npm installed locally 10.8.2
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: eslint-plugin-import@2.29.1
+npm warn Found: eslint@9.9.1
+npm warn node_modules/eslint
+npm warn   dev eslint@"9.9.1" from the root project
+npm warn   7 more (eslint-config-prettier, eslint-plugin-prettier, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer eslint@"^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8" from eslint-plugin-import@2.29.1
+npm warn node_modules/eslint-plugin-import
+npm warn   eslint-plugin-import@"2.29.1" from generator-jhipster@8.7.0
+npm warn   node_modules/generator-jhipster
+npm warn
+npm warn Conflicting peer dependency: eslint@8.57.0
+npm warn node_modules/eslint
+npm warn   peer eslint@"^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8" from eslint-plugin-import@2.29.1
+npm warn   node_modules/eslint-plugin-import
+npm warn     eslint-plugin-import@"2.29.1" from generator-jhipster@8.7.0
+npm warn     node_modules/generator-jhipster
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@5.0.15: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+npm warn deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm warn deprecated   npm i nyc
+npm warn deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+
+> spring-boot-demo@0.0.1-SNAPSHOT prepare
+> husky
+
+
+added 1909 packages, and audited 1910 packages in 2m
+
+368 packages are looking for funding
+  run `npm fund` for details
+
+6 vulnerabilities (3 moderate, 1 high, 2 critical)
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+✔ Application successfully committed to Git from /Volumes/project/course/infinite-apps/jhipster/blog/app.
+✔ Spring Boot application generated successfully.
+  Run your Spring Boot application:
+  ./mvnw
+✔ React application generated successfully.
+  Start your Webpack development server with:
+  npm start
+
+
+Congratulations, JHipster execution is complete!
+If you find JHipster useful consider sponsoring the project https://www.jhipster.tech/sponsors/
+
+Thanks for using JHipster!

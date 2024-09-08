@@ -1,0 +1,299 @@
+➜  app git:(main) ./mvnw                              
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< app.springboot.demo:spring-boot-demo >----------------
+[INFO] Building Spring Boot Demo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.3:run (default-cli) > test-compile @ spring-boot-demo >>>
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-versions) @ spring-boot-demo ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-dependencyConvergence) @ spring-boot-demo ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] 
+[INFO] --- properties:1.2.1:read-project-properties (default) @ spring-boot-demo ---
+[INFO] Loading 26 properties from File: /Volumes/project/course/infinite-apps/jhipster/blog/app/sonar-project.properties
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (pre-unit-tests) @ spring-boot-demo ---
+[INFO] argLine set to -javaagent:/Users/balu/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/Volumes/project/course/infinite-apps/jhipster/blog/app/target/jacoco.exec -Djava.security.egd=file:/dev/./urandom -Xmx1G
+[INFO] 
+[INFO] --- spotless:2.43.0:apply (spotless) @ spring-boot-demo ---
+[INFO] Spotless.Java is keeping 107 files clean - 0 were changed to be clean, 0 were already clean, 107 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- spring-boot:3.3.3:build-info (build-info) @ spring-boot-demo ---
+[INFO] 
+[INFO] --- antrun:3.1.0:run (eval-frontend-checksum) @ spring-boot-demo ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- frontend:1.15.0:install-node-and-npm (install-node-and-npm) @ spring-boot-demo ---
+[INFO] Node v20.17.0 is already installed.
+[INFO] NPM 10.8.2 is already installed.
+[INFO] 
+[INFO] --- frontend:1.15.0:npm (npm install) @ spring-boot-demo ---
+[INFO] Skipping execution.
+[INFO] 
+[INFO] --- frontend:1.15.0:npm (webapp build dev) @ spring-boot-demo ---
+[INFO] Skipping execution.
+[INFO] 
+[INFO] --- checksum:1.11:files (create-pre-compiled-webapp-checksum) @ spring-boot-demo ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ spring-boot-demo ---
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] Copying 13 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ spring-boot-demo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- checksum:1.11:files (create-compiled-webapp-checksum) @ spring-boot-demo ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ spring-boot-demo ---
+[INFO] Copying 11 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ spring-boot-demo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.3.3:run (default-cli) < test-compile @ spring-boot-demo <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.3:run (default-cli) @ spring-boot-demo ---
+[INFO] Attaching agents: []
+01:59:47,114 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.5.7
+01:59:47,117 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 - Here is a list of configurators discovered as a service, by rank: 
+01:59:47,117 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 -   org.springframework.boot.logging.logback.RootLogLevelConfigurator
+01:59:47,117 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 - They will be invoked in order until ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY is returned.
+01:59:47,117 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 - Constructed configurator of type class org.springframework.boot.logging.logback.RootLogLevelConfigurator
+01:59:47,130 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 - org.springframework.boot.logging.logback.RootLogLevelConfigurator.configure() call lasted 0 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+01:59:47,130 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+01:59:47,131 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+01:59:47,135 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+01:59:47,135 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+01:59:47,135 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 4 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+01:59:47,135 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+01:59:47,136 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+01:59:47,136 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+01:59:47,137 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.xml]
+01:59:47,137 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 1 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+01:59:47,137 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 - Trying to configure with ch.qos.logback.classic.BasicConfigurator
+01:59:47,138 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 - Constructed configurator of type class ch.qos.logback.classic.BasicConfigurator
+01:59:47,138 |-INFO in ch.qos.logback.classic.BasicConfigurator@4d06ca11 - Setting up default configuration.
+01:59:47,158 |-INFO in ch.qos.logback.classic.util.ContextInitializer@470fcb6 - ch.qos.logback.classic.BasicConfigurator.configure() call lasted 20 milliseconds. ExecutionStatus=NEUTRAL
+01:59:47,712 |-WARN in ch.qos.logback.core.joran.action.ConversionRuleAction - [converterClass] attribute is deprecated and replaced by [class]. See element [conversionRule] near line 6
+01:59:47,744 |-INFO in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - Registering a new ReconfigureOnChangeTask ReconfigureOnChangeTask(born:1725740987743)
+01:59:47,744 |-INFO in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - No 'scanPeriod' specified. Defaulting to 1 minutes
+01:59:47,744 |-INFO in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - Will scan for changes in [file:/Volumes/project/course/infinite-apps/jhipster/blog/app/target/classes/logback-spring.xml] 
+01:59:47,744 |-INFO in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - Setting ReconfigureOnChangeTask scanning period to 1 minutes
+01:59:47,748 |-INFO in ch.qos.logback.core.model.processor.ConversionRuleModelHandler - registering conversion word crlf with class [app.springboot.demo.config.CRLFLogConverter]
+01:59:47,750 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@37ddf7a1 - value "%clr(%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX}){faint} %clr(%5p) %clr(30964){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %crlf(%m){red} %n%wEx" substituted for "${CONSOLE_LOG_PATTERN:-%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd'T'HH:mm:ss.SSSXXX}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %crlf(%m){red} %n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"
+01:59:47,750 |-INFO in ch.qos.logback.core.joran.util.ConfigurationWatchListUtil@6ff32e86 - Adding [jar:file:/Users/balu/.m2/repository/org/springframework/boot/spring-boot/3.3.3/spring-boot-3.3.3.jar!/org/springframework/boot/logging/logback/defaults.xml] to configuration watch list.
+01:59:47,750 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@6ce5ea82 - URL [jar:file:/Users/balu/.m2/repository/org/springframework/boot/spring-boot/3.3.3/spring-boot-3.3.3.jar!/org/springframework/boot/logging/logback/defaults.xml] is not of type file
+01:59:47,753 |-WARN in ch.qos.logback.core.joran.action.ConversionRuleAction - [converterClass] attribute is deprecated and replaced by [class]. See element [conversionRule] near line 8
+01:59:47,753 |-WARN in ch.qos.logback.core.joran.action.ConversionRuleAction - [converterClass] attribute is deprecated and replaced by [class]. See element [conversionRule] near line 9
+01:59:47,753 |-WARN in ch.qos.logback.core.joran.action.ConversionRuleAction - [converterClass] attribute is deprecated and replaced by [class]. See element [conversionRule] near line 10
+01:59:47,754 |-WARN in ch.qos.logback.core.joran.action.ConversionRuleAction - [converterClass] attribute is deprecated and replaced by [class]. See element [conversionRule] near line 11
+01:59:47,754 |-WARN in ch.qos.logback.core.joran.action.ConversionRuleAction - [converterClass] attribute is deprecated and replaced by [class]. See element [conversionRule] near line 12
+01:59:47,754 |-INFO in ch.qos.logback.core.model.processor.ConversionRuleModelHandler - registering conversion word applicationName with class [org.springframework.boot.logging.logback.ApplicationNameConverter]
+01:59:47,754 |-INFO in ch.qos.logback.core.model.processor.ConversionRuleModelHandler - registering conversion word clr with class [org.springframework.boot.logging.logback.ColorConverter]
+01:59:47,754 |-INFO in ch.qos.logback.core.model.processor.ConversionRuleModelHandler - registering conversion word correlationId with class [org.springframework.boot.logging.logback.CorrelationIdConverter]
+01:59:47,754 |-INFO in ch.qos.logback.core.model.processor.ConversionRuleModelHandler - registering conversion word wex with class [org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter]
+01:59:47,754 |-INFO in ch.qos.logback.core.model.processor.ConversionRuleModelHandler - registering conversion word wEx with class [org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter]
+01:59:47,755 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@37ddf7a1 - value "%clr(%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX}){faint} %clr(%5p) %clr(30964){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %crlf(%m){red} %n%wEx" substituted for "${CONSOLE_LOG_PATTERN:-%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd'T'HH:mm:ss.SSSXXX}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr(%applicationName[%15.15t]){faint} %clr(${LOG_CORRELATION_PATTERN:-}){faint}%clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"
+01:59:47,755 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@37ddf7a1 - value "UTF-8" substituted for "${CONSOLE_LOG_CHARSET:-${file.encoding:-UTF-8}}"
+01:59:47,755 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@37ddf7a1 - value "TRACE" substituted for "${CONSOLE_LOG_THRESHOLD:-TRACE}"
+01:59:47,755 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@37ddf7a1 - value "%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %5p 30964 --- %applicationName[%t] %-40.40logger{39} : %m%n%wEx" substituted for "${FILE_LOG_PATTERN:-%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd'T'HH:mm:ss.SSSXXX}} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- %applicationName[%t] ${LOG_CORRELATION_PATTERN:-}%-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"
+01:59:47,755 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@37ddf7a1 - value "UTF-8" substituted for "${FILE_LOG_CHARSET:-${file.encoding:-UTF-8}}"
+01:59:47,755 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@37ddf7a1 - value "TRACE" substituted for "${FILE_LOG_THRESHOLD:-TRACE}"
+01:59:47,755 |-INFO in ch.qos.logback.core.joran.util.ConfigurationWatchListUtil@6ff32e86 - Adding [jar:file:/Users/balu/.m2/repository/org/springframework/boot/spring-boot/3.3.3/spring-boot-3.3.3.jar!/org/springframework/boot/logging/logback/console-appender.xml] to configuration watch list.
+01:59:47,755 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@6ce5ea82 - URL [jar:file:/Users/balu/.m2/repository/org/springframework/boot/spring-boot/3.3.3/spring-boot-3.3.3.jar!/org/springframework/boot/logging/logback/console-appender.xml] is not of type file
+01:59:47,758 |-INFO in ch.qos.logback.classic.model.processor.LoggerContextListenerModelHandler - Adding LoggerContextListener of type [ch.qos.logback.classic.jul.LevelChangePropagator] to the object stack
+01:59:47,766 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating DEBUG level on Logger[ROOT] onto the JUL framework
+01:59:47,766 |-INFO in ch.qos.logback.classic.model.processor.LoggerContextListenerModelHandler - Starting LoggerContextListener
+01:59:47,767 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.catalina.startup.DigesterFactory] to ERROR
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating ERROR level on Logger[org.apache.catalina.startup.DigesterFactory] onto the JUL framework
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating ERROR level on Logger[org.apache.catalina.startup.DigesterFactory] onto the JUL framework
+01:59:47,767 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.catalina.util.LifecycleBase] to ERROR
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating ERROR level on Logger[org.apache.catalina.util.LifecycleBase] onto the JUL framework
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating ERROR level on Logger[org.apache.catalina.util.LifecycleBase] onto the JUL framework
+01:59:47,767 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.coyote.http11.Http11NioProtocol] to WARN
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.apache.coyote.http11.Http11NioProtocol] onto the JUL framework
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.apache.coyote.http11.Http11NioProtocol] onto the JUL framework
+01:59:47,767 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.sshd.common.util.SecurityUtils] to WARN
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.apache.sshd.common.util.SecurityUtils] onto the JUL framework
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.apache.sshd.common.util.SecurityUtils] onto the JUL framework
+01:59:47,767 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.tomcat.util.net.NioSelectorPool] to WARN
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.apache.tomcat.util.net.NioSelectorPool] onto the JUL framework
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.apache.tomcat.util.net.NioSelectorPool] onto the JUL framework
+01:59:47,767 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.eclipse.jetty.util.component.AbstractLifeCycle] to ERROR
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating ERROR level on Logger[org.eclipse.jetty.util.component.AbstractLifeCycle] onto the JUL framework
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating ERROR level on Logger[org.eclipse.jetty.util.component.AbstractLifeCycle] onto the JUL framework
+01:59:47,767 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.hibernate.validator.internal.util.Version] to WARN
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.hibernate.validator.internal.util.Version] onto the JUL framework
+01:59:47,767 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.hibernate.validator.internal.util.Version] onto the JUL framework
+01:59:47,768 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.boot.actuate.endpoint.jmx] to WARN
+01:59:47,768 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.springframework.boot.actuate.endpoint.jmx] onto the JUL framework
+01:59:47,768 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.springframework.boot.actuate.endpoint.jmx] onto the JUL framework
+01:59:47,768 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+01:59:47,768 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+01:59:47,770 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@37ddf7a1 - value "TRACE" substituted for "${CONSOLE_LOG_THRESHOLD}"
+01:59:47,771 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+01:59:47,772 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@37ddf7a1 - value "%clr(%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX}){faint} %clr(%5p) %clr(30964){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %crlf(%m){red} %n%wEx" substituted for "${CONSOLE_LOG_PATTERN}"
+01:59:47,772 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@37ddf7a1 - value "UTF-8" substituted for "${CONSOLE_LOG_CHARSET}"
+01:59:47,789 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [app.springboot.demo] to INFO
+01:59:47,789 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating INFO level on Logger[app.springboot.demo] onto the JUL framework
+01:59:47,789 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating INFO level on Logger[app.springboot.demo] onto the JUL framework
+01:59:47,789 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [angus.activation] to WARN
+01:59:47,789 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[angus.activation] onto the JUL framework
+01:59:47,789 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[angus.activation] onto the JUL framework
+01:59:47,789 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jakarta.activation] to WARN
+01:59:47,789 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[jakarta.activation] onto the JUL framework
+01:59:47,789 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[jakarta.activation] onto the JUL framework
+01:59:47,789 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jakarta.mail] to WARN
+01:59:47,789 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[jakarta.mail] onto the JUL framework
+01:59:47,789 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[jakarta.mail] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jakarta.management.remote] to WARN
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[jakarta.management.remote] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[jakarta.management.remote] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jakarta.xml.bind] to WARN
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[jakarta.xml.bind] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[jakarta.xml.bind] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdk.event.security] to INFO
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating INFO level on Logger[jdk.event.security] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating INFO level on Logger[jdk.event.security] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [com.ryantenney] to WARN
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[com.ryantenney] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[com.ryantenney] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [com.sun] to WARN
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[com.sun] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[com.sun] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [com.zaxxer] to WARN
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[com.zaxxer] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[com.zaxxer] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.undertow] to WARN
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[io.undertow] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[io.undertow] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.undertow.websockets.jsr] to ERROR
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating ERROR level on Logger[io.undertow.websockets.jsr] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating ERROR level on Logger[io.undertow.websockets.jsr] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache] to WARN
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.apache] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.apache] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.catalina.startup.DigesterFactory] to OFF
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating OFF level on Logger[org.apache.catalina.startup.DigesterFactory] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating OFF level on Logger[org.apache.catalina.startup.DigesterFactory] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.bson] to WARN
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.bson] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.bson] onto the JUL framework
+01:59:47,790 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.hibernate.validator] to WARN
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.hibernate.validator] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.hibernate.validator] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.hibernate] to WARN
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.hibernate] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.hibernate] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.hibernate.ejb.HibernatePersistence] to OFF
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating OFF level on Logger[org.hibernate.ejb.HibernatePersistence] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating OFF level on Logger[org.hibernate.ejb.HibernatePersistence] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.postgresql] to WARN
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.postgresql] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.postgresql] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework] to WARN
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.springframework] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.springframework] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.web] to WARN
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.springframework.web] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.springframework.web] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.security] to WARN
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.springframework.security] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.springframework.security] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.boot.autoconfigure.logging] to INFO
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating INFO level on Logger[org.springframework.boot.autoconfigure.logging] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating INFO level on Logger[org.springframework.boot.autoconfigure.logging] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.cache] to WARN
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.springframework.cache] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.springframework.cache] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.thymeleaf] to WARN
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.thymeleaf] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.thymeleaf] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.xnio] to WARN
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[org.xnio] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[org.xnio] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [io.swagger.v3] to INFO
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating INFO level on Logger[io.swagger.v3] onto the JUL framework
+01:59:47,791 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating INFO level on Logger[io.swagger.v3] onto the JUL framework
+01:59:47,792 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [sun.rmi] to WARN
+01:59:47,792 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[sun.rmi] onto the JUL framework
+01:59:47,792 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[sun.rmi] onto the JUL framework
+01:59:47,792 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [sun.rmi.transport] to WARN
+01:59:47,792 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[sun.rmi.transport] onto the JUL framework
+01:59:47,792 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[sun.rmi.transport] onto the JUL framework
+01:59:47,792 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [Validator] to INFO
+01:59:47,792 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating INFO level on Logger[Validator] onto the JUL framework
+01:59:47,792 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating INFO level on Logger[Validator] onto the JUL framework
+01:59:47,792 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [_org.springframework.web.servlet.HandlerMapping.Mappings] to INFO
+01:59:47,792 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating INFO level on Logger[_org.springframework.web.servlet.HandlerMapping.Mappings] onto the JUL framework
+01:59:47,792 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating INFO level on Logger[_org.springframework.web.servlet.HandlerMapping.Mappings] onto the JUL framework
+01:59:47,792 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [liquibase] to WARN
+01:59:47,792 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating WARN level on Logger[liquibase] onto the JUL framework
+01:59:47,792 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating WARN level on Logger[liquibase] onto the JUL framework
+01:59:47,792 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [LiquibaseSchemaResolver] to INFO
+01:59:47,792 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@4ff06eea - Propagating INFO level on Logger[LiquibaseSchemaResolver] onto the JUL framework
+01:59:47,792 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@17c8f34d - Propagating INFO level on Logger[LiquibaseSchemaResolver] onto the JUL framework
+01:59:47,792 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@37ddf7a1 - value "DEBUG" substituted for "${log.level}"
+01:59:47,792 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to DEBUG
+01:59:47,792 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+01:59:47,792 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@3901fe8c - End of configuration.
+01:59:47,793 |-INFO in org.springframework.boot.logging.logback.SpringBootJoranConfigurator@7af3b2d4 - Registering current configuration as safe fallback point
+
+
+        ██╗ ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
+        ██║ ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
+        ██║ ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
+  ██╗   ██║ ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
+  ╚██████╔╝ ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
+   ╚═════╝  ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
+
+:: JHipster 🤓  :: Running Spring Boot 3.3.3 :: Startup profile(s) dev ::
+:: https://www.jhipster.tech ::
+
+2024-09-08T01:59:47.826+05:30 DEBUG 30964 --- [kground-preinit] org.jboss.logging                        : Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2024-09-08T01:59:47.880+05:30  INFO 30964 --- [  restartedMain] app.springboot.demo.SpringBootDemoApp    : Starting SpringBootDemoApp using Java 21.0.4 with PID 30964 (/Volumes/project/course/infinite-apps/jhipster/blog/app/target/classes started by balu in /Volumes/project/course/infinite-apps/jhipster/blog/app) 
+2024-09-08T01:59:47.880+05:30 DEBUG 30964 --- [  restartedMain] app.springboot.demo.SpringBootDemoApp    : Running with Spring Boot v3.3.3, Spring v6.1.12 
+2024-09-08T01:59:47.881+05:30  INFO 30964 --- [  restartedMain] app.springboot.demo.SpringBootDemoApp    : The following 2 profiles are active: "dev", "api-docs" 
+2024-09-08T01:59:50.631+05:30 DEBUG 30964 --- [  restartedMain] a.springboot.demo.config.WebConfigurer   : Registering CORS filter 
+2024-09-08T01:59:50.675+05:30  INFO 30964 --- [  restartedMain] a.springboot.demo.config.WebConfigurer   : Web application configuration, using profiles: dev 
+2024-09-08T01:59:50.675+05:30  INFO 30964 --- [  restartedMain] a.springboot.demo.config.WebConfigurer   : Web application fully configured 
+2024-09-08T01:59:50.756+05:30 DEBUG 30964 --- [  restartedMain] a.s.demo.config.AsyncConfiguration       : Creating Async Task Executor 
+2024-09-08T01:59:50.869+05:30 DEBUG 30964 --- [  restartedMain] a.s.demo.config.LiquibaseConfiguration   : Configuring Liquibase 
+2024-09-08T01:59:51.022+05:30  WARN 30964 --- [oot-demo-task-1] t.j.c.liquibase.AsyncSpringLiquibase     : Starting Liquibase asynchronously, your database might not be ready at startup! 
+2024-09-08T01:59:51.819+05:30  WARN 30964 --- [  restartedMain] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details. 
+2024-09-08T01:59:52.057+05:30  WARN 30964 --- [  restartedMain] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details. 
+2024-09-08T01:59:52.058+05:30  WARN 30964 --- [  restartedMain] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details. 
+2024-09-08T01:59:52.060+05:30  WARN 30964 --- [  restartedMain] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details. 
+2024-09-08T01:59:52.131+05:30  WARN 30964 --- [  restartedMain] org.hibernate.orm.incubating             : HHH90006001: Encountered incubating setting [hibernate.type.preferred_instant_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details. 
+2024-09-08T01:59:55.293+05:30 DEBUG 30964 --- [  restartedMain] c.a.JHipsterSpringDocGroupsConfiguration : Initializing JHipster OpenApi customizer 
+2024-09-08T01:59:55.306+05:30 DEBUG 30964 --- [  restartedMain] c.a.JHipsterSpringDocGroupsConfiguration : Initializing JHipster OpenApi default group 
+2024-09-08T01:59:55.312+05:30 DEBUG 30964 --- [  restartedMain] c.a.JHipsterSpringDocGroupsConfiguration : Initializing JHipster OpenApi management group 
+2024-09-08T01:59:55.564+05:30 DEBUG 30964 --- [  restartedMain] i.m.c.u.i.logging.InternalLoggerFactory  : Using SLF4J as the default logging framework 
+2024-09-08T01:59:56.157+05:30  INFO 30964 --- [  restartedMain] org.jboss.threads                        : JBoss Threads version 3.5.0.Final 
+2024-09-08T01:59:56.256+05:30  INFO 30964 --- [  restartedMain] app.springboot.demo.SpringBootDemoApp    : Started SpringBootDemoApp in 8.915 seconds (process running for 9.332) 
+2024-09-08T01:59:56.263+05:30  INFO 30964 --- [  restartedMain] app.springboot.demo.SpringBootDemoApp    : 
+----------------------------------------------------------
+	Application 'SpringBootDemo' is running! Access URLs:
+	Local: 		http://localhost:8080/
+	External: 	http://127.0.0.1:8080/
+	Profile(s): 	[dev, api-docs]
+---------------------------------------------------------- 
+2024-09-08T02:00:22.168+05:30 DEBUG 30964 --- [oot-demo-task-1] t.j.c.liquibase.AsyncSpringLiquibase     : Liquibase has updated your database in 31145 ms 
+2024-09-08T02:00:22.169+05:30  WARN 30964 --- [oot-demo-task-1] t.j.c.liquibase.AsyncSpringLiquibase     : Warning, Liquibase took more than 5 seconds to start up! 
+2024-09-08T02:00:35.003+05:30 DEBUG 30964 --- [  XNIO-1 task-3] a.s.d.web.rest.AuthenticateController    : Enter: authorize() with argument[s] = [LoginVM{username='admin', rememberMe=false}] 
+2024-09-08T02:00:35.132+05:30 DEBUG 30964 --- [  XNIO-1 task-3] a.s.d.security.DomainUserDetailsService  : Authenticating admin 
+2024-09-08T02:00:35.309+05:30 DEBUG 30964 --- [  XNIO-1 task-3] org.hibernate.SQL                        : select u1_0.id,u1_0.activated,u1_0.activation_key,a1_0.user_id,a1_1.name,u1_0.created_by,u1_0.created_date,u1_0.email,u1_0.first_name,u1_0.image_url,u1_0.lang_key,u1_0.last_modified_by,u1_0.last_modified_date,u1_0.last_name,u1_0.login,u1_0.password_hash,u1_0.reset_date,u1_0.reset_key from jhi_user u1_0 left join jhi_user_authority a1_0 on u1_0.id=a1_0.user_id left join jhi_authority a1_1 on a1_1.name=a1_0.authority_name where u1_0.login=? 
+2024-09-08T02:00:35.550+05:30 DEBUG 30964 --- [  XNIO-1 task-3] a.s.d.web.rest.AuthenticateController    : Exit: authorize() with result = <200 OK OK,app.springboot.demo.web.rest.AuthenticateController$JWTToken@18a30408,[Authorization:"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyNTgyNzQzNSwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzI1NzQxMDM1fQ.BE9cpO4rRkd1-P5JJYvNR7CZgugOSwOf536dehafwNOMI5Je74kVbQhJgjq7Eq9XsQ08iqOc52TOoW6Tqctyng"]> 
+2024-09-08T02:00:35.592+05:30 DEBUG 30964 --- [  XNIO-1 task-3] a.s.demo.web.rest.AccountResource        : Enter: getAccount() with argument[s] = [] 
+2024-09-08T02:00:35.593+05:30 DEBUG 30964 --- [  XNIO-1 task-3] a.springboot.demo.service.UserService    : Enter: getUserWithAuthorities() with argument[s] = [] 
+2024-09-08T02:00:35.595+05:30 DEBUG 30964 --- [  XNIO-1 task-3] org.hibernate.SQL                        : select u1_0.id,u1_0.activated,u1_0.activation_key,a1_0.user_id,a1_1.name,u1_0.created_by,u1_0.created_date,u1_0.email,u1_0.first_name,u1_0.image_url,u1_0.lang_key,u1_0.last_modified_by,u1_0.last_modified_date,u1_0.last_name,u1_0.login,u1_0.password_hash,u1_0.reset_date,u1_0.reset_key from jhi_user u1_0 left join jhi_user_authority a1_0 on u1_0.id=a1_0.user_id left join jhi_authority a1_1 on a1_1.name=a1_0.authority_name where u1_0.login=? 
+2024-09-08T02:00:35.598+05:30 DEBUG 30964 --- [  XNIO-1 task-3] a.springboot.demo.service.UserService    : Exit: getUserWithAuthorities() with result = Optional[User{login='admin', firstName='Administrator', lastName='Administrator', email='admin@localhost', imageUrl='', activated='true', langKey='en', activationKey='null'}] 
+2024-09-08T02:00:35.603+05:30 DEBUG 30964 --- [  XNIO-1 task-3] a.s.demo.web.rest.AccountResource        : Exit: getAccount() with result = AdminUserDTO{login='admin', firstName='Administrator', lastName='Administrator', email='admin@localhost', imageUrl='', activated=true, langKey='en', createdBy=system, createdDate=null, lastModifiedBy='system', lastModifiedDate=null, authorities=[ROLE_USER, ROLE_ADMIN]} 

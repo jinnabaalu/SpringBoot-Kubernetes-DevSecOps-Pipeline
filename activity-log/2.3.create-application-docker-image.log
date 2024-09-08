@@ -1,0 +1,643 @@
+➜  app git:(main) npm run java:docker
+
+> spring-boot-demo@0.0.1-SNAPSHOT java:docker
+> ./mvnw -ntp verify -DskipTests -Pprod jib:dockerBuild
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< app.springboot.demo:spring-boot-demo >----------------
+[INFO] Building Spring Boot Demo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-versions) @ spring-boot-demo ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-dependencyConvergence) @ spring-boot-demo ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.dependency.DependencyConvergence passed
+[INFO] 
+[INFO] --- properties:1.2.1:read-project-properties (default) @ spring-boot-demo ---
+[INFO] Loading 26 properties from File: /Volumes/project/course/infinite-apps/jhipster/blog/app/sonar-project.properties
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (pre-unit-tests) @ spring-boot-demo ---
+[INFO] argLine set to -javaagent:/Users/balu/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/Volumes/project/course/infinite-apps/jhipster/blog/app/target/jacoco.exec -Djava.security.egd=file:/dev/./urandom -Xmx1G
+[INFO] 
+[INFO] --- git-commit-id:9.0.1:revision (default) @ spring-boot-demo ---
+[INFO] dotGitDirectory '/Volumes/project/course/infinite-apps/jhipster/blog/app/.git'
+[INFO] Collected git.branch with value main
+[INFO] Collected git.commit.id.describe with value 8a9cb29
+[INFO] Collected git.commit.id.abbrev with value 8a9cb29
+[INFO] including property 'git.commit.id.describe' in results
+[INFO] including property 'git.commit.id.abbrev' in results
+[INFO] including property 'git.branch' in results
+[INFO] Writing properties file [/Volumes/project/course/infinite-apps/jhipster/blog/app/target/classes/git.properties] (for project Spring Boot Demo)...
+[INFO] 
+[INFO] --- spotless:2.43.0:apply (spotless) @ spring-boot-demo ---
+[INFO] Spotless.Java is keeping 107 files clean - 0 were changed to be clean, 0 were already clean, 107 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- spring-boot:3.3.3:build-info (build-info) @ spring-boot-demo ---
+[INFO] 
+[INFO] --- frontend:1.15.0:install-node-and-npm (install-node-and-npm) @ spring-boot-demo ---
+[INFO] Node v20.17.0 is already installed.
+[INFO] NPM 10.8.2 is already installed.
+[INFO] 
+[INFO] --- frontend:1.15.0:npm (npm install) @ spring-boot-demo ---
+[INFO] Running 'npm install' in /Volumes/project/course/infinite-apps/jhipster/blog/app
+[INFO] npm warn ERESOLVE overriding peer dependency
+[INFO] npm warn While resolving: eslint-plugin-import@2.29.1
+[INFO] npm warn Found: eslint@9.9.1
+[INFO] npm warn node_modules/eslint
+[INFO] npm warn   dev eslint@"9.9.1" from the root project
+[INFO] npm warn   14 more (@eslint-community/eslint-utils, ...)
+[INFO] npm warn
+[INFO] npm warn Could not resolve dependency:
+[INFO] npm warn peer eslint@"^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8" from eslint-plugin-import@2.29.1
+[INFO] npm warn node_modules/eslint-plugin-import
+[INFO] npm warn   eslint-plugin-import@"2.29.1" from generator-jhipster@8.7.0
+[INFO] npm warn   node_modules/generator-jhipster
+[INFO] npm warn
+[INFO] npm warn Conflicting peer dependency: eslint@8.57.0
+[INFO] npm warn node_modules/eslint
+[INFO] npm warn   peer eslint@"^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8" from eslint-plugin-import@2.29.1
+[INFO] npm warn   node_modules/eslint-plugin-import
+[INFO] npm warn     eslint-plugin-import@"2.29.1" from generator-jhipster@8.7.0
+[INFO] npm warn     node_modules/generator-jhipster
+[INFO] 
+[INFO] > spring-boot-demo@0.0.1-SNAPSHOT prepare
+[INFO] > husky
+[INFO] 
+[INFO] 
+[INFO] up to date, audited 1911 packages in 4s
+[INFO] 
+[INFO] 368 packages are looking for funding
+[INFO]   run `npm fund` for details
+[INFO] 
+[INFO] 6 vulnerabilities (3 moderate, 1 high, 2 critical)
+[INFO] 
+[INFO] To address all issues possible (including breaking changes), run:
+[INFO]   npm audit fix --force
+[INFO] 
+[INFO] Some issues need review, and may require choosing
+[INFO] a different dependency.
+[INFO] 
+[INFO] Run `npm audit` for details.
+[INFO] 
+[INFO] --- frontend:1.15.0:npm (webapp build prod) @ spring-boot-demo ---
+[INFO] npm not inheriting proxy config from Maven
+[INFO] Running 'npm run webapp:prod' in /Volumes/project/course/infinite-apps/jhipster/blog/app
+[INFO] 
+[INFO] > spring-boot-demo@0.0.1-SNAPSHOT webapp:prod
+[INFO] > npm run clean-www && npm run webapp:build:prod --
+[INFO] 
+[INFO] 
+[INFO] > spring-boot-demo@0.0.1-SNAPSHOT clean-www
+[INFO] > rimraf target/classes/static/
+[INFO] 
+[INFO] 
+[INFO] > spring-boot-demo@0.0.1-SNAPSHOT webapp:build:prod
+[INFO] > webpack --config webpack/webpack.prod.js --progress=profile
+[INFO] 
+[INFO] <s> [webpack.Progress] 0% 
+[INFO] 
+[INFO] <s> [webpack.Progress] 1% setup before run
+[INFO] <s> [webpack.Progress] 1% setup before run NodeEnvironmentPlugin
+[INFO] <s> [webpack.Progress] 1% setup before run
+[INFO] <s> [webpack.Progress] 2% setup run
+[INFO] <s> [webpack.Progress] 2% setup run webpack-cli
+[INFO] <s> [webpack.Progress] 2% setup run ESLintWebpackPlugin_1
+[INFO] <s> [webpack.Progress] 2% setup run ForkTsCheckerWebpackPlugin
+[INFO] <s> [webpack.Progress] 2% setup run
+[INFO] <s> [webpack.Progress] 4% setup normal module factory
+[INFO] <s> [webpack.Progress] 4% setup normal module factory
+[INFO] <s> [webpack.Progress] 5% setup context module factory
+[INFO] <s> [webpack.Progress] 5% setup context module factory
+[INFO] <s> [webpack.Progress] 6% setup before compile
+[INFO] <s> [webpack.Progress] 6% setup before compile ProgressPlugin
+[INFO] <s> [webpack.Progress] 6% setup before compile
+[INFO] <s> [webpack.Progress] 7% setup compile
+[INFO] <s> [webpack.Progress] 7% setup compile ExternalsPlugin
+[INFO] <s> [webpack.Progress] 7% setup compile
+[INFO] <s> [webpack.Progress] 8% setup compilation
+[INFO] <s> [webpack.Progress] 8% setup compilation CopyPlugin
+[INFO] <s> [webpack.Progress] 8% setup compilation mini-css-extract-plugin
+[INFO] <s> [webpack.Progress] 8% setup compilation GenerateSW
+[INFO] <s> [webpack.Progress] 8% setup compilation ArrayPushCallbackChunkFormatPlugin
+[INFO] <s> [webpack.Progress] 8% setup compilation JsonpChunkLoadingPlugin
+[INFO] <s> [webpack.Progress] 8% setup compilation StartupChunkDependenciesPlugin
+[INFO] <s> [webpack.Progress] 8% setup compilation ImportScriptsChunkLoadingPlugin
+[INFO] <s> [webpack.Progress] 8% setup compilation FetchCompileWasmPlugin
+[INFO] <s> [webpack.Progress] 8% setup compilation FetchCompileAsyncWasmPlugin
+[INFO] <s> [webpack.Progress] 8% setup compilation WorkerPlugin
+[INFO] <s> [webpack.Progress] 8% setup compilation SplitChunksPlugin
+[INFO] <s> [webpack.Progress] 8% setup compilation ResolverCachePlugin
+[INFO] <s> [webpack.Progress] 8% setup compilation HtmlWebpackPlugin
+[INFO] <s> [webpack.Progress] 8% setup compilation
+[INFO] <s> [webpack.Progress] 9% setup compilation
+[INFO] <s> [webpack.Progress] 9% setup compilation ProgressPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation DefinePlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation DefinePlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation ForkTsCheckerWebpackPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation mini-css-extract-plugin
+[INFO] <s> [webpack.Progress] 9% setup compilation LoaderOptionsPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation ChunkPrefetchPreloadPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation JavascriptModulesPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation JsonModulesPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation AssetModulesPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation EntryPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation RuntimePlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation InferAsyncModulesPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation DataUriPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation FileUriPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation CompatibilityPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation HarmonyModulesPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation AMDPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation RequireJsStuffPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation CommonJsPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation LoaderPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation LoaderPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation NodeStuffPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation APIPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation ExportsInfoApiPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation WebpackIsIncludedPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation ConstPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation UseStrictPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation RequireIncludePlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation RequireEnsurePlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation RequireContextPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation ImportPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation ImportMetaContextPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation SystemPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation ImportMetaPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation URLPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation DefaultStatsFactoryPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation DefaultStatsPresetPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation DefaultStatsPrinterPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation JavascriptMetaInfoPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation EnsureChunkConditionsPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation RemoveEmptyChunksPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation MergeDuplicateChunksPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation FlagIncludedChunksPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation SideEffectsFlagPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation FlagDependencyExportsPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation FlagDependencyUsagePlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation InnerGraphPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation MangleExportsPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation ModuleConcatenationPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation NoEmitOnErrorsPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation RealContentHashPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation WasmFinalizeExportsPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation DeterministicModuleIdsPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation DeterministicChunkIdsPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation DefinePlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation TerserPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation CssMinimizerPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation TemplatedPathPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation RecordIdsPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation WarnCaseSensitiveModulesPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation AddBuildDependenciesPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation AddBuildDependenciesPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation AddBuildDependenciesPlugin
+[INFO] <s> [webpack.Progress] 9% setup compilation ESLintWebpackPlugin_1
+[INFO] <i> [webpack.Progress]  |  | 182 ms compilation > ESLintWebpackPlugin_1
+[INFO] <s> [webpack.Progress] 9% setup compilation
+[INFO] <i> [webpack.Progress]  | 203 ms setup > compilation
+[INFO] <i> [webpack.Progress] 216 ms setup
+[INFO] <s> [webpack.Progress] 10% building
+[INFO] <s> [webpack.Progress] 10% building 0/1 entries 0/0 dependencies 0/0 modules
+[INFO] <i> [webpack.Progress]  | 176 ms building > entries dependencies modules
+[INFO] <s> [webpack.Progress] 10% building import loader ./node_modules/thread-loader/dist/cjs.js
+[INFO] <s> [webpack.Progress] 10% building import loader ./node_modules/ts-loader/index.js
+[INFO] <i> [webpack.Progress]  | 24 ms building > import loader ./node_modules/ts-loader/index.js
+[INFO] <s> [webpack.Progress] 10% building 0/1 entries 1/1 dependencies 0/1 modules
+[INFO] <s> [webpack.Progress] 10% building 0/1 entries 1/2 dependencies 0/1 modules
+[INFO] <s> [webpack.Progress] 10% building 0/1 entries 26/33 dependencies 3/21 modules
+[INFO] <w> [webpack.Progress]  | 1226 ms building > entries dependencies modules
+[INFO] <s> [webpack.Progress] 10% building import loader ./node_modules/mini-css-extract-plugin/dist/loader.js
+[INFO] <s> [webpack.Progress] 10% building import loader ./node_modules/css-loader/dist/cjs.js
+[INFO] <i> [webpack.Progress]  | 108 ms building > import loader ./node_modules/css-loader/dist/cjs.js
+[INFO] <s> [webpack.Progress] 10% building import loader ./node_modules/postcss-loader/dist/cjs.js
+[INFO] <i> [webpack.Progress]  | 15 ms building > import loader ./node_modules/postcss-loader/dist/cjs.js
+[INFO] <s> [webpack.Progress] 10% building import loader ./node_modules/sass-loader/dist/cjs.js
+[INFO] <s> [webpack.Progress] 10% building 0/1 entries 121/146 dependencies 3/112 modules
+[INFO] <s> [webpack.Progress] 10% building 0/1 entries 462/500 dependencies 9/146 modules
+[INFO] <s> [webpack.Progress] 10% building 0/1 entries 635/659 dependencies 48/169 modules
+[INFO] <s> [webpack.Progress] 11% building 0/1 entries 862/900 dependencies 159/270 modules
+[INFO] <s> [webpack.Progress] 13% building 0/1 entries 1301/1320 dependencies 300/402 modules
+[INFO] <s> [webpack.Progress] 15% building 0/1 entries 1779/1800 dependencies 474/552 modules
+[INFO] <s> [webpack.Progress] 65% building 1/1 entries 1905/1905 dependencies 592/592 modules
+[INFO] <w> [webpack.Progress]  | 7528 ms building > entries dependencies modules
+[INFO] <s> [webpack.Progress] 65% building
+[INFO] <s> [webpack.Progress] 69% building finish
+[INFO] <s> [webpack.Progress] 69% building finish
+[INFO] <w> [webpack.Progress] 9091 ms building
+[INFO] <s> [webpack.Progress] 70% sealing finish module graph
+[INFO] <s> [webpack.Progress] 70% sealing finish module graph ResolverCachePlugin
+[INFO] <s> [webpack.Progress] 70% sealing finish module graph InferAsyncModulesPlugin
+[INFO] <s> [webpack.Progress] 70% sealing finish module graph FlagDependencyExportsPlugin
+[INFO] <i> [webpack.Progress]  |  | 26 ms finish module graph > FlagDependencyExportsPlugin
+[INFO] <s> [webpack.Progress] 70% sealing finish module graph InnerGraphPlugin
+[INFO] <s> [webpack.Progress] 70% sealing finish module graph WasmFinalizeExportsPlugin
+[INFO] <s> [webpack.Progress] 70% sealing finish module graph ESLintWebpackPlugin_1
+[INFO] <s> [webpack.Progress] 70% sealing finish module graph
+[INFO] <i> [webpack.Progress]  | 39 ms sealing > finish module graph
+[INFO] <s> [webpack.Progress] 70% sealing plugins
+[INFO] <s> [webpack.Progress] 70% sealing plugins WarnCaseSensitiveModulesPlugin
+[INFO] <s> [webpack.Progress] 70% sealing plugins
+[INFO] <s> [webpack.Progress] 71% sealing dependencies optimization
+[INFO] <s> [webpack.Progress] 71% sealing dependencies optimization SideEffectsFlagPlugin
+[INFO] <s> [webpack.Progress] 71% sealing dependencies optimization FlagDependencyUsagePlugin
+[INFO] <i> [webpack.Progress]  |  | 27 ms dependencies optimization > FlagDependencyUsagePlugin
+[INFO] <s> [webpack.Progress] 71% sealing dependencies optimization
+[INFO] <i> [webpack.Progress]  | 33 ms sealing > dependencies optimization
+[INFO] <s> [webpack.Progress] 71% sealing after dependencies optimization
+[INFO] <s> [webpack.Progress] 71% sealing after dependencies optimization
+[INFO] <s> [webpack.Progress] 72% sealing chunk graph
+[INFO] <s> [webpack.Progress] 72% sealing chunk graph
+[INFO] <i> [webpack.Progress]  | 16 ms sealing > chunk graph
+[INFO] <s> [webpack.Progress] 73% sealing after chunk graph
+[INFO] <s> [webpack.Progress] 73% sealing after chunk graph
+[INFO] <s> [webpack.Progress] 73% sealing optimizing
+[INFO] <s> [webpack.Progress] 73% sealing optimizing
+[INFO] <s> [webpack.Progress] 74% sealing module optimization
+[INFO] <s> [webpack.Progress] 74% sealing module optimization
+[INFO] <s> [webpack.Progress] 75% sealing after module optimization
+[INFO] <s> [webpack.Progress] 75% sealing after module optimization
+[INFO] <s> [webpack.Progress] 75% sealing chunk optimization
+[INFO] <s> [webpack.Progress] 75% sealing chunk optimization EnsureChunkConditionsPlugin
+[INFO] <s> [webpack.Progress] 75% sealing chunk optimization RemoveEmptyChunksPlugin
+[INFO] <s> [webpack.Progress] 75% sealing chunk optimization MergeDuplicateChunksPlugin
+[INFO] <s> [webpack.Progress] 75% sealing chunk optimization SplitChunksPlugin
+[INFO] <i> [webpack.Progress]  |  | 11 ms chunk optimization > SplitChunksPlugin
+[INFO] <s> [webpack.Progress] 75% sealing chunk optimization RemoveEmptyChunksPlugin
+[INFO] <s> [webpack.Progress] 75% sealing chunk optimization
+[INFO] <i> [webpack.Progress]  | 11 ms sealing > chunk optimization
+[INFO] <s> [webpack.Progress] 76% sealing after chunk optimization
+[INFO] <s> [webpack.Progress] 76% sealing after chunk optimization
+[INFO] <s> [webpack.Progress] 77% sealing module and chunk tree optimization
+[INFO] <s> [webpack.Progress] 77% sealing module and chunk tree optimization PersistentChildCompilerSingletonPlugin
+[INFO] <s> [webpack.Progress] 77% sealing module and chunk tree optimization
+[INFO] <s> [webpack.Progress] 77% sealing after module and chunk tree optimization
+[INFO] <s> [webpack.Progress] 77% sealing after module and chunk tree optimization
+[INFO] <s> [webpack.Progress] 78% sealing chunk modules optimization
+[INFO] <s> [webpack.Progress] 78% sealing chunk modules optimization ModuleConcatenationPlugin
+[INFO] <i> [webpack.Progress]  |  | 55 ms chunk modules optimization > ModuleConcatenationPlugin
+[INFO] <s> [webpack.Progress] 78% sealing chunk modules optimization
+[INFO] <i> [webpack.Progress]  | 55 ms sealing > chunk modules optimization
+[INFO] <s> [webpack.Progress] 78% sealing after chunk modules optimization
+[INFO] <s> [webpack.Progress] 78% sealing after chunk modules optimization
+[INFO] <s> [webpack.Progress] 79% sealing module reviving
+[INFO] <s> [webpack.Progress] 79% sealing module reviving RecordIdsPlugin
+[INFO] <s> [webpack.Progress] 79% sealing module reviving
+[INFO] <s> [webpack.Progress] 80% sealing before module ids
+[INFO] <s> [webpack.Progress] 80% sealing before module ids
+[INFO] <s> [webpack.Progress] 80% sealing module ids
+[INFO] <s> [webpack.Progress] 80% sealing module ids DeterministicModuleIdsPlugin
+[INFO] <s> [webpack.Progress] 80% sealing module ids
+[INFO] <s> [webpack.Progress] 81% sealing module id optimization
+[INFO] <s> [webpack.Progress] 81% sealing module id optimization
+[INFO] <s> [webpack.Progress] 82% sealing module id optimization
+[INFO] <s> [webpack.Progress] 82% sealing module id optimization
+[INFO] <s> [webpack.Progress] 82% sealing chunk reviving
+[INFO] <s> [webpack.Progress] 82% sealing chunk reviving RecordIdsPlugin
+[INFO] <s> [webpack.Progress] 82% sealing chunk reviving
+[INFO] <s> [webpack.Progress] 83% sealing before chunk ids
+[INFO] <s> [webpack.Progress] 83% sealing before chunk ids
+[INFO] <s> [webpack.Progress] 84% sealing chunk ids
+[INFO] <s> [webpack.Progress] 84% sealing chunk ids DeterministicChunkIdsPlugin
+[INFO] <s> [webpack.Progress] 84% sealing chunk ids
+[INFO] <s> [webpack.Progress] 84% sealing chunk id optimization
+[INFO] <s> [webpack.Progress] 84% sealing chunk id optimization FlagIncludedChunksPlugin
+[INFO] <s> [webpack.Progress] 84% sealing chunk id optimization
+[INFO] <s> [webpack.Progress] 85% sealing after chunk id optimization
+[INFO] <s> [webpack.Progress] 85% sealing after chunk id optimization
+[INFO] <s> [webpack.Progress] 86% sealing record modules
+[INFO] <s> [webpack.Progress] 86% sealing record modules RecordIdsPlugin
+[INFO] <s> [webpack.Progress] 86% sealing record modules
+[INFO] <s> [webpack.Progress] 86% sealing record chunks
+[INFO] <s> [webpack.Progress] 86% sealing record chunks RecordIdsPlugin
+[INFO] <s> [webpack.Progress] 86% sealing record chunks
+[INFO] <i> [webpack.Progress]  | 12 ms sealing > record chunks
+[INFO] <s> [webpack.Progress] 87% sealing module hashing
+[INFO] <s> [webpack.Progress] 87% sealing module hashing
+[INFO] <i> [webpack.Progress]  | 35 ms sealing > module hashing
+[INFO] <s> [webpack.Progress] 87% sealing code generation
+[INFO] <s> [webpack.Progress] 87% sealing code generation
+[INFO] <i> [webpack.Progress]  | 432 ms sealing > code generation
+[INFO] <s> [webpack.Progress] 88% sealing runtime requirements
+[INFO] <s> [webpack.Progress] 88% sealing runtime requirements
+[INFO] <s> [webpack.Progress] 89% sealing hashing
+[INFO] <s> [webpack.Progress] 89% sealing hashing
+[INFO] <i> [webpack.Progress]  | 16 ms sealing > hashing
+[INFO] <s> [webpack.Progress] 89% sealing after hashing
+[INFO] <s> [webpack.Progress] 89% sealing after hashing
+[INFO] <s> [webpack.Progress] 90% sealing record hash
+[INFO] <s> [webpack.Progress] 90% sealing record hash
+[INFO] <s> [webpack.Progress] 91% sealing module assets processing
+[INFO] <s> [webpack.Progress] 91% sealing module assets processing
+[INFO] <s> [webpack.Progress] 91% sealing chunk assets processing
+[INFO] <s> [webpack.Progress] 91% sealing chunk assets processing
+[INFO] <s> [webpack.Progress] 92% sealing asset processing
+[INFO] <s> [webpack.Progress] 92% sealing asset processing copy-webpack-plugin
+[INFO] <w> [webpack.Progress]  |  | 1557 ms asset processing > copy-webpack-plugin
+[INFO] <s> [webpack.Progress] 92% sealing asset processing PersistentChildCompilerSingletonPlugin
+[INFO] <s> [webpack.Progress] 92% sealing asset processing ESLintWebpackPlugin_1
+[INFO] <s> [webpack.Progress] 92% sealing asset processing TerserPlugin
+[INFO] <e> [webpack.Progress]  |  | 12518 ms asset processing > TerserPlugin
+[INFO] <s> [webpack.Progress] 92% sealing asset processing CssMinimizerPlugin
+[INFO] <w> [webpack.Progress]  |  | 2240 ms asset processing > CssMinimizerPlugin
+[INFO] <s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
+[INFO] <i> [webpack.Progress]  |  | 165 ms asset processing > HtmlWebpackPlugin
+[INFO] <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
+[INFO] <i> [webpack.Progress]  |  | 63 ms asset processing > RealContentHashPlugin
+[INFO] <s> [webpack.Progress] 92% sealing asset processing GenerateSW
+[INFO] <w> [webpack.Progress]  |  | 1517 ms asset processing > GenerateSW
+[INFO] <s> [webpack.Progress] 92% sealing asset processing
+[INFO] <e> [webpack.Progress]  | 18069 ms sealing > asset processing
+[INFO] <s> [webpack.Progress] 93% sealing after asset optimization
+[INFO] <s> [webpack.Progress] 93% sealing after asset optimization
+[INFO] <s> [webpack.Progress] 93% sealing recording
+[INFO] <s> [webpack.Progress] 93% sealing recording
+[INFO] <s> [webpack.Progress] 94% sealing after seal
+[INFO] <s> [webpack.Progress] 94% sealing after seal
+[INFO] <e> [webpack.Progress] 18749 ms sealing
+[INFO] <s> [webpack.Progress] 95% emitting emit
+[INFO] <s> [webpack.Progress] 95% emitting emit
+[INFO] <i> [webpack.Progress]  | 33 ms emitting > emit
+[INFO] <s> [webpack.Progress] 98% emitting after emit
+[INFO] <s> [webpack.Progress] 98% emitting after emit SizeLimitsPlugin
+[INFO] <s> [webpack.Progress] 98% emitting after emit
+[INFO] <i> [webpack.Progress] 35 ms emitting
+[INFO] <s> [webpack.Progress] 99% done plugins
+[INFO] <s> [webpack.Progress] 99% done plugins ForkTsCheckerWebpackPlugin
+[INFO] <s> [webpack.Progress] 99% done plugins IdleFileCachePlugin
+[INFO] <s> [webpack.Progress] 99% done plugins
+[INFO] <s> [webpack.Progress] 99% 
+[INFO] 
+[INFO] <s> [webpack.Progress] 99% cache store build dependencies
+[INFO] <s> [webpack.Progress] 99% cache store build dependencies IdleFileCachePlugin
+[INFO] <s> [webpack.Progress] 99% cache store build dependencies
+[INFO] <s> [webpack.Progress] 99% cache begin idle
+[INFO] <s> [webpack.Progress] 99% cache begin idle IdleFileCachePlugin
+[INFO] <s> [webpack.Progress] 99% cache begin idle
+[INFO] <s> [webpack.Progress] 100% 
+[INFO] 
+[INFO] <s> [webpack.Progress] 99% cache shutdown
+[INFO] <s> [webpack.Progress] 99% cache shutdown MemoryCachePlugin
+[INFO] <s> [webpack.Progress] 99% cache shutdown IdleFileCachePlugin
+[INFO] <s> [webpack.Progress] 99% cache shutdown IdleFileCachePlugin process pending cache items
+[INFO] <s> [webpack.Progress] 99% cache shutdown IdleFileCachePlugin resolve build dependencies
+[INFO] <w> [webpack.Progress]  |  |  | 2895 ms IdleFileCachePlugin > resolve build dependencies
+[INFO] <s> [webpack.Progress] 99% cache shutdown IdleFileCachePlugin snapshot build dependencies resolving
+[INFO] <s> [webpack.Progress] 99% cache shutdown IdleFileCachePlugin snapshot build dependencies modules
+[INFO] <i> [webpack.Progress]  |  |  | 80 ms IdleFileCachePlugin > snapshot build dependencies
+[INFO] <s> [webpack.Progress] 99% cache shutdown IdleFileCachePlugin serialize pack
+[INFO] <i> [webpack.Progress]  |  |  | 515 ms IdleFileCachePlugin > serialize pack
+[INFO] <s> [webpack.Progress] 99% cache shutdown IdleFileCachePlugin stored
+[INFO] <w> [webpack.Progress]  |  | 3499 ms shutdown > IdleFileCachePlugin
+[INFO] <s> [webpack.Progress] 99% cache shutdown
+[INFO] <w> [webpack.Progress]  | 3499 ms cache > shutdown
+[INFO] <w> [webpack.Progress] 3499 ms cache
+[INFO] <s> [webpack.Progress] 100% 
+[INFO] 
+[INFO] assets by path content/ 677 KiB
+[INFO]   assets by path content/images/*.png 159 KiB 17 assets
+[INFO]   assets by path content/images/*.svg 275 KiB 4 assets
+[INFO]   assets by info 241 KiB [immutable] 2 assets
+[INFO]   + 1 asset
+[INFO] assets by path swagger-ui/ 3.66 MiB 16 assets
+[INFO] assets by path *.js 1 MiB
+[INFO]   assets by info 1010 KiB [immutable] 3 assets
+[INFO]   asset workbox-1c3383c2.js 14 KiB [emitted] [minimized]
+[INFO]   asset service-worker.js 3.45 KiB [emitted] [minimized]
+[INFO] asset index.html 3.74 KiB [emitted]
+[INFO] asset favicon.ico 1.54 KiB [emitted] [from: src/main/webapp/favicon.ico] [copied]
+[INFO] asset manifest.webapp 763 bytes [emitted] [from: src/main/webapp/manifest.webapp] [copied]
+[INFO] asset robots.txt 216 bytes [emitted] [from: src/main/webapp/robots.txt] [copied]
+[INFO] Entrypoint main [big] 1.2 MiB = content/main.bf60c21619963c243153.css 241 KiB main.f1cc76e0.js 983 KiB
+[INFO] orphan modules 971 KiB (javascript) 937 bytes (runtime) [orphan] 273 modules
+[INFO] runtime modules 16.7 KiB 38 modules
+[INFO] modules by path ./ 3.26 MiB (javascript) 247 KiB (css/mini-extract)
+[INFO]   modules by path ./node_modules/ 3.04 MiB (javascript) 14 KiB (css/mini-extract) 294 modules
+[INFO]   modules by path ./src/main/webapp/app/ 219 KiB (javascript) 233 KiB (css/mini-extract)
+[INFO]     javascript modules 219 KiB 18 modules
+[INFO]     css modules 233 KiB
+[INFO]       modules by path ./src/main/webapp/app/shared/ 1.7 KiB 3 modules
+[INFO]       modules by path ./src/main/webapp/app/modules/ 185 bytes 2 modules
+[INFO]       + 1 module
+[INFO]   ./terminal-highlight (ignored) 15 bytes [built] [code generated]
+[INFO] path (ignored) 15 bytes [built] [code generated]
+[INFO] source-map-js (ignored) 15 bytes [built] [code generated]
+[INFO] url (ignored) 15 bytes [built] [code generated]
+[INFO] fs (ignored) 15 bytes [built] [code generated]
+[INFO] 
+[INFO] LOG from GenerateSW
+[INFO] <i> The service worker at service-worker.js will precache
+[INFO] <i>         32 URLs, totaling 1.73 MB.
+[INFO] 
+[INFO] WARNING in ./src/main/webapp/app/app.scss (./src/main/webapp/app/app.scss.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/main/webapp/app/app.scss)
+[INFO] Module Warning (from ./node_modules/sass-loader/dist/cjs.js):
+[INFO] Deprecation Warning on line 37, column 4 of file:///Volumes/project/course/infinite-apps/jhipster/blog/app/node_modules/bootstrap/scss/_type.scss:37:4:
+[INFO] Sass's behavior for declarations that appear after nested
+[INFO] rules will be changing to match the behavior specified by CSS in an upcoming
+[INFO] version. To keep the existing behavior, move the declaration above the nested
+[INFO] rule. To opt into the new behavior, wrap the declaration in `& {}`.
+[INFO] 
+[INFO] More info: https://sass-lang.com/d/mixed-decls
+[INFO] 
+[INFO] 37 |     font-family: $display-font-family;
+[INFO] 
+[INFO] 
+[INFO] node_modules/bootstrap/scss/_type.scss 38:5      @import
+[INFO] node_modules/bootstrap/scss/bootstrap.scss 17:9  @import
+[INFO] src/main/webapp/app/app.scss 4:9                 root stylesheet
+[INFO]  @ ./src/main/webapp/app/app.scss
+[INFO]  @ ./src/main/webapp/app/app.tsx 2:0-20
+[INFO]  @ ./src/main/webapp/app/index.tsx 9:0-35 21:7-19
+[INFO] 
+[INFO] WARNING in ./src/main/webapp/app/app.scss (./src/main/webapp/app/app.scss.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/main/webapp/app/app.scss)
+[INFO] Module Warning (from ./node_modules/sass-loader/dist/cjs.js):
+[INFO] Deprecation Warning on line 38, column 4 of file:///Volumes/project/course/infinite-apps/jhipster/blog/app/node_modules/bootstrap/scss/_type.scss:38:4:
+[INFO] Sass's behavior for declarations that appear after nested
+[INFO] rules will be changing to match the behavior specified by CSS in an upcoming
+[INFO] version. To keep the existing behavior, move the declaration above the nested
+[INFO] rule. To opt into the new behavior, wrap the declaration in `& {}`.
+[INFO] 
+[INFO] More info: https://sass-lang.com/d/mixed-decls
+[INFO] 
+[INFO] 38 |     font-style: $display-font-style;
+[INFO] 
+[INFO] 
+[INFO] node_modules/bootstrap/scss/_type.scss 39:5      @import
+[INFO] node_modules/bootstrap/scss/bootstrap.scss 17:9  @import
+[INFO] src/main/webapp/app/app.scss 4:9                 root stylesheet
+[INFO]  @ ./src/main/webapp/app/app.scss
+[INFO]  @ ./src/main/webapp/app/app.tsx 2:0-20
+[INFO]  @ ./src/main/webapp/app/index.tsx 9:0-35 21:7-19
+[INFO] 
+[INFO] WARNING in ./src/main/webapp/app/app.scss (./src/main/webapp/app/app.scss.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/main/webapp/app/app.scss)
+[INFO] Module Warning (from ./node_modules/sass-loader/dist/cjs.js):
+[INFO] Deprecation Warning on line 39, column 4 of file:///Volumes/project/course/infinite-apps/jhipster/blog/app/node_modules/bootstrap/scss/_type.scss:39:4:
+[INFO] Sass's behavior for declarations that appear after nested
+[INFO] rules will be changing to match the behavior specified by CSS in an upcoming
+[INFO] version. To keep the existing behavior, move the declaration above the nested
+[INFO] rule. To opt into the new behavior, wrap the declaration in `& {}`.
+[INFO] 
+[INFO] More info: https://sass-lang.com/d/mixed-decls
+[INFO] 
+[INFO] 39 |     font-weight: $display-font-weight;
+[INFO] 
+[INFO] 
+[INFO] node_modules/bootstrap/scss/_type.scss 40:5      @import
+[INFO] node_modules/bootstrap/scss/bootstrap.scss 17:9  @import
+[INFO] src/main/webapp/app/app.scss 4:9                 root stylesheet
+[INFO]  @ ./src/main/webapp/app/app.scss
+[INFO]  @ ./src/main/webapp/app/app.tsx 2:0-20
+[INFO]  @ ./src/main/webapp/app/index.tsx 9:0-35 21:7-19
+[INFO] 
+[INFO] WARNING in ./src/main/webapp/app/app.scss (./src/main/webapp/app/app.scss.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/main/webapp/app/app.scss)
+[INFO] Module Warning (from ./node_modules/sass-loader/dist/cjs.js):
+[INFO] Deprecation Warning on line 502, column 2 of file:///Volumes/project/course/infinite-apps/jhipster/blog/app/node_modules/bootstrap/scss/_reboot.scss:502:2:
+[INFO] Sass's behavior for declarations that appear after nested
+[INFO] rules will be changing to match the behavior specified by CSS in an upcoming
+[INFO] version. To keep the existing behavior, move the declaration above the nested
+[INFO] rule. To opt into the new behavior, wrap the declaration in `& {}`.
+[INFO] 
+[INFO] More info: https://sass-lang.com/d/mixed-decls
+[INFO] 
+[INFO] 502 |   font-weight: $legend-font-weight;
+[INFO] 
+[INFO] 
+[INFO] node_modules/bootstrap/scss/_reboot.scss 503:3   @import
+[INFO] node_modules/bootstrap/scss/bootstrap.scss 16:9  @import
+[INFO] src/main/webapp/app/app.scss 4:9                 root stylesheet
+[INFO]  @ ./src/main/webapp/app/app.scss
+[INFO]  @ ./src/main/webapp/app/app.tsx 2:0-20
+[INFO]  @ ./src/main/webapp/app/index.tsx 9:0-35 21:7-19
+[INFO] 
+[INFO] WARNING in ./src/main/webapp/app/app.scss (./src/main/webapp/app/app.scss.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/main/webapp/app/app.scss)
+[INFO] Module Warning (from ./node_modules/sass-loader/dist/cjs.js):
+[INFO] Deprecation Warning on line 503, column 2 of file:///Volumes/project/course/infinite-apps/jhipster/blog/app/node_modules/bootstrap/scss/_reboot.scss:503:2:
+[INFO] Sass's behavior for declarations that appear after nested
+[INFO] rules will be changing to match the behavior specified by CSS in an upcoming
+[INFO] version. To keep the existing behavior, move the declaration above the nested
+[INFO] rule. To opt into the new behavior, wrap the declaration in `& {}`.
+[INFO] 
+[INFO] More info: https://sass-lang.com/d/mixed-decls
+[INFO] 
+[INFO] 503 |   line-height: inherit;
+[INFO] 
+[INFO] 
+[INFO] node_modules/bootstrap/scss/_reboot.scss 504:3   @import
+[INFO] node_modules/bootstrap/scss/bootstrap.scss 16:9  @import
+[INFO] src/main/webapp/app/app.scss 4:9                 root stylesheet
+[INFO]  @ ./src/main/webapp/app/app.scss
+[INFO]  @ ./src/main/webapp/app/app.tsx 2:0-20
+[INFO]  @ ./src/main/webapp/app/index.tsx 9:0-35 21:7-19
+[INFO] 
+[INFO] WARNING in ./src/main/webapp/app/app.scss (./src/main/webapp/app/app.scss.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/main/webapp/app/app.scss)
+[INFO] Module Warning (from ./node_modules/sass-loader/dist/cjs.js):
+[INFO] 22 repetitive deprecation warnings omitted.
+[INFO] Run in verbose mode to see all warnings.
+[INFO]  @ ./src/main/webapp/app/app.scss
+[INFO]  @ ./src/main/webapp/app/app.tsx 2:0-20
+[INFO]  @ ./src/main/webapp/app/index.tsx 9:0-35 21:7-19
+[INFO] 
+[INFO] WARNING in [eslint] 
+[INFO] /Volumes/project/course/infinite-apps/jhipster/blog/app/src/main/webapp/app/config/notification-middleware.ts
+[INFO]   26:1  warning  Unused eslint-disable directive (no problems were reported from 'complexity')
+[INFO] 
+[INFO] ✖ 1 problem (0 errors, 1 warning)
+[INFO]   0 errors and 1 warning potentially fixable with the `--fix` option.
+[INFO] 
+[INFO] WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+[INFO] This can impact web performance.
+[INFO] Assets: 
+[INFO]   swagger-ui/swagger-ui-bundle.js (1.27 MiB)
+[INFO]   swagger-ui/swagger-ui-es-bundle-core.js (417 KiB)
+[INFO]   swagger-ui/swagger-ui-es-bundle.js (1.27 MiB)
+[INFO]   swagger-ui/swagger-ui.js (306 KiB)
+[INFO]   main.f1cc76e0.js (983 KiB)
+[INFO] 
+[INFO] WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+[INFO] Entrypoints:
+[INFO]   main (1.2 MiB)
+[INFO]       content/main.bf60c21619963c243153.css
+[INFO]       main.f1cc76e0.js
+[INFO] 
+[INFO] webpack 5.94.0 compiled with 9 warnings in 28092 ms
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ spring-boot-demo ---
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] Copying 13 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ spring-boot-demo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ spring-boot-demo ---
+[INFO] Copying 11 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ spring-boot-demo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.4.0:test (default-test) @ spring-boot-demo ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (post-unit-test) @ spring-boot-demo ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- frontend:1.15.0:npm (webapp build test) @ spring-boot-demo ---
+[INFO] Skipping execution.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ spring-boot-demo ---
+[INFO] Building jar: /Volumes/project/course/infinite-apps/jhipster/blog/app/target/spring-boot-demo-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.3:repackage (repackage) @ spring-boot-demo ---
+[INFO] Replacing main artifact /Volumes/project/course/infinite-apps/jhipster/blog/app/target/spring-boot-demo-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /Volumes/project/course/infinite-apps/jhipster/blog/app/target/spring-boot-demo-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- modernizer:2.9.0:modernizer (modernizer) @ spring-boot-demo ---
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent-integration (pre-integration-tests) @ spring-boot-demo ---
+[INFO] argLine set to -javaagent:/Users/balu/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/Volumes/project/course/infinite-apps/jhipster/blog/app/target/jacoco-it.exec -Djava.security.egd=file:/dev/./urandom -Xmx1G
+[INFO] 
+[INFO] --- failsafe:3.4.0:integration-test (default) @ spring-boot-demo ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- failsafe:3.4.0:integration-test (integration-test) @ spring-boot-demo ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report-integration (post-integration-tests) @ spring-boot-demo ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- checkstyle:3.5.0:check (default) @ spring-boot-demo ---
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- failsafe:3.4.0:verify (default) @ spring-boot-demo ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- failsafe:3.4.0:verify (verify) @ spring-boot-demo ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jib:3.4.3:dockerBuild (default-cli) @ spring-boot-demo ---
+[INFO] Running extension: com.google.cloud.tools.jib.maven.extension.springboot.JibSpringBootExtension
+[INFO] Running Jib Spring Boot extension
+[INFO] 
+[INFO] Containerizing application to Docker daemon as springbootdemo...
+[WARNING] Base image 'eclipse-temurin:17-jre-focal' does not use a specific image digest - build may not be reproducible
+[INFO] The base image requires auth. Trying again for eclipse-temurin:17-jre-focal...
+[INFO] Using credentials from Docker config (/Users/balu/.config/containers/auth.json) for eclipse-temurin:17-jre-focal
+[INFO] Using base image with digest: sha256:f8670c1c9d46e152138286f5e4b3170e55bf0ed78ece84f2837f3ee6d744004b
+[INFO] 
+[INFO] Container entrypoint set to [bash, -c, /entrypoint.sh]
+[INFO] 
+[INFO] Built image to Docker daemon as springbootdemo
+[INFO] Executing tasks:
+[INFO] [==============================] 100.0% complete
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  56.810 s
+[INFO] Finished at: 2024-09-08T02:02:05+05:30
+[INFO] ------------------------------------------------------------------------
